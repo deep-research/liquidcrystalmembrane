@@ -8,8 +8,6 @@
         method="post"
         @submit.prevent="handleSubmit"
         action="/success/"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
       >
       <input type="hidden" name="name" value="contact" />
       <p hidden>
@@ -90,7 +88,7 @@
           .join('&')
       },
       handleSubmit(e) {
-        fetch('/', {
+        fetch('https://script.google.com/macros/s/AKfycbxpa_5TqeAKKtIrJCLOXIu42QDQUGHiJpnj3ExPNdKdwyrK9RI/exec', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: this.encode({
