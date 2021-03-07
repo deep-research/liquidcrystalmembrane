@@ -1,8 +1,7 @@
 module.exports = {
   siteName: 'Gridsome starter bootstrap',
   siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
-  siteUrl: 'https://liquidcrystalmembrane.com/',
-  pathPrefix: '/liquidcrystalmembrane',
+  siteUrl: 'https://liquidcrystalmembrane.com',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
