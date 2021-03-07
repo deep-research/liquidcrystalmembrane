@@ -60,9 +60,13 @@
           />
         </b-form-group>
 
-        <vue-recaptcha sitekey="6Lew53UaAAAAAEAnYQPLzUF--MpAQRFBPiSWURqw">
-          <b-button type="submit" variant="primary">Submit</b-button>
-        </vue-recaptcha>      
+        <vue-recaptcha
+          sitekey="6Ldk9nUaAAAAAHhS05g7v7mOV05VVG0NqrUrByHQ"
+          type="checkbox"
+          :loadRecaptchaScript="true"
+          @verify="onVerify">
+        </vue-recaptcha>
+        <b-button type="submit" variant="primary">Submit</b-button>
       </b-form>
     </div>
   </Layout>
@@ -84,6 +88,7 @@
           subject: '',
           message: '',
         },
+        human: false
       }
     },
     methods: {
@@ -93,17 +98,24 @@
           .join('&')
       },
       handleSubmit(e) {
-        fetch('https://script.google.com/macros/s/AKfycbxpa_5TqeAKKtIrJCLOXIu42QDQUGHiJpnj3ExPNdKdwyrK9RI/exec', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: this.encode({
-            'form-name': e.target.getAttribute('name'),
-            ...this.form,
-          }),
-        })
-        .then(() => this.$router.push('/success'))
-        .catch(error => alert(error))
-      }
+        if (this.human) {
+          fetch('https://script.google.com/macros/s/AKfycbxpa_5TqeAKKtIrJCLOXIu42QDQUGHiJpnj3ExPNdKdwyrK9RI/exec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: this.encode({
+              'form-name': e.target.getAttribute('name'),
+              ...this.form,
+            }),
+          })
+          .then(() => this.$router.push('/success'))
+          .catch(error => alert(error))
+        }
+      },
+      onVerify (response) {
+        if (response) {
+          this.human = true
+        }
+      } 
     }
   }
 </script>
