@@ -66,6 +66,7 @@
           :loadRecaptchaScript="true"
           @verify="onVerify">
         </vue-recaptcha>
+        <p style="color: red" v-if="validationError">Please fill out the captcha.</p>
         <b-button type="submit" variant="primary">Submit</b-button>
       </b-form>
     </div>
@@ -88,7 +89,8 @@
           subject: '',
           message: '',
         },
-        human: false
+        human: false,
+        validationError: false
       }
     },
     methods: {
@@ -109,6 +111,8 @@
           })
           .then(() => this.$router.push('/success'))
           .catch(error => alert(error))
+        } else {
+          this.validationError = true
         }
       },
       onVerify (response) {
