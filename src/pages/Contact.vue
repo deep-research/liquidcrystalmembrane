@@ -60,14 +60,19 @@
           />
         </b-form-group>
 
-        <b-button type="submit" variant="primary">Submit</b-button>
+        <vue-recaptcha sitekey="6Lew53UaAAAAAEAnYQPLzUF--MpAQRFBPiSWURqw">
+          <b-button type="submit" variant="primary">Submit</b-button>
+        </vue-recaptcha>      
       </b-form>
     </div>
   </Layout>
 </template>
 
 <script>
+  import VueRecaptcha from 'vue-recaptcha';
+
   export default {
+    components: { VueRecaptcha },
     metaInfo: {
       title: 'Contact'
     },
