@@ -106,10 +106,6 @@
           .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
           .join('&')
       },
-      validateEmail() {
-        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(this.form.email);
-      },
       validate () {
         let validated = true
          if (this.validation.human) {
@@ -126,7 +122,12 @@
            validated = false          
         }
 
-        if (this.form.email && this.validateEmail()) {
+        const validateEmail  = () => {
+          const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(this.form.email);
+        }
+
+        if (this.form.email && validateEmail()) {
           this.validation.emailError = false
         } else {
            this.validation.emailError = true
