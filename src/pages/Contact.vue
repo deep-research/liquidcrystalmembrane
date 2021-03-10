@@ -20,9 +20,9 @@
             id="name"
             name="name"
             v-model="form.name"
-            required
             placeholder="Enter name"
           />
+          <div style="color: red" v-if="this.validation.nameError">Please enter your name.</div>
         </b-form-group>
 
         <b-form-group
@@ -34,10 +34,9 @@
             id="email"
             v-model="form.email"
             name="email"
-            type="email"
-            required
             placeholder="Enter email"
           />
+          <div style="color: red" v-if="this.validation.emailError">Please enter a valid email address.</div>
         </b-form-group>
 
         <b-form-group id="input-group-3" label="Subject:" label-for="form-subject">
@@ -45,9 +44,9 @@
             id="subject"
             name="subject"
             v-model="form.subject"
-            required
             placeholder="Enter subject"
           />
+          <div style="color: red" v-if="this.validation.subjectError">Please enter a subject.</div>
         </b-form-group>
 
         <b-form-group id="input-group-4" label="Message:" label-for="message">
@@ -55,18 +54,20 @@
             id="message"
             name="message"
             v-model="form.message"
-            required
             placeholder="Enter message"
           />
+          <div style="color: red" v-if="this.validation.messageError">Please enter a message.</div>
         </b-form-group>
 
-        <vue-recaptcha
-          sitekey="6Ldk9nUaAAAAAHhS05g7v7mOV05VVG0NqrUrByHQ"
-          type="checkbox"
-          :loadRecaptchaScript="true"
-          @verify="onVerify">
-        </vue-recaptcha>
-        <p style="color: red" v-if="validationError">Please fill out the captcha.</p>
+        <div style="margin-bottom: 16px;">
+          <vue-recaptcha
+            sitekey="6Ldk9nUaAAAAAHhS05g7v7mOV05VVG0NqrUrByHQ"
+            type="checkbox"
+            :loadRecaptchaScript="true"
+            @verify="onVerify">
+          </vue-recaptcha>
+          <div style="color: red" v-if="this.validation.captchaError">Please fill out the captcha.</div>
+        </div>
         <b-button type="submit" variant="primary">Submit</b-button>
       </b-form>
     </div>
@@ -89,8 +90,14 @@
           subject: '',
           message: '',
         },
-        human: false,
-        validationError: false
+        validation: {
+          human: false,
+          captchaError: false,
+          nameError: false,
+          emailError: false,
+          subjectError: false,
+          messageError: false
+        }
       }
     },
     methods: {
@@ -99,8 +106,55 @@
           .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
           .join('&')
       },
+      validateEmail() {
+        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(this.form.email);
+      },
+      validate () {
+        let validated = true
+         if (this.validation.human) {
+           this.validation.captchaError = false
+         } else {
+           this.validation.captchaError = true
+           validated = false
+         }
+
+        if (this.form.name) {
+          this.validation.nameError = false
+        } else {
+           this.validation.nameError = true
+           validated = false          
+        }
+
+        if (this.form.email && this.validateEmail()) {
+          this.validation.emailError = false
+        } else {
+           this.validation.emailError = true
+           validated = false          
+        }
+
+        if (this.form.subject) {
+          this.validation.subjectError = false
+        } else {
+           this.validation.subjectError = true
+           validated = false          
+        }
+
+        if (this.form.message) {
+          this.validation.messageError = false
+        } else {
+           this.validation.messageError = true
+           validated = false          
+        }
+
+        if (validated) {
+          return true
+        } else {
+          return false
+        }
+      },
       handleSubmit(e) {
-        if (this.human) {
+        if (this.validate()) {
           fetch('https://script.google.com/macros/s/AKfycbxpa_5TqeAKKtIrJCLOXIu42QDQUGHiJpnj3ExPNdKdwyrK9RI/exec', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -111,13 +165,11 @@
           })
           .then(() => this.$router.push('/success'))
           .catch(error => alert(error))
-        } else {
-          this.validationError = true
         }
       },
       onVerify (response) {
         if (response) {
-          this.human = true
+          this.validation.human = true
         }
       } 
     }
