@@ -1,6 +1,6 @@
 module.exports = {
-  siteName: 'Gridsome starter bootstrap',
-  siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
+  siteName: 'Liquid Crystal Membrane',
+  siteDescription: 'Scientific research on liquid crystal membranes and other topics.',
   siteUrl: 'https://liquidcrystalmembrane.com',
   plugins: [
     {

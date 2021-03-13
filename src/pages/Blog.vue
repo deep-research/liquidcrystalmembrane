@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="my-4 mb-5">Blog</h1>
+    <h1 class="my-4 mb-5">Articles</h1>
 
     <g-link
       :to="item.node.path"
