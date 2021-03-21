@@ -22,8 +22,8 @@
 </template>
 
 <page-query>
-query Blog {
-	posts: allBlogPost(sortBy: "date") {
+query Articles {
+	posts: allArticle(sortBy: "date") {
     edges {
       node {
         id
@@ -36,6 +36,14 @@ query Blog {
   }
 }
 </page-query>
+
+<script>
+export default {
+  metaInfo: {
+    title: 'Articles'
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .media {

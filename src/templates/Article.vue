@@ -23,8 +23,8 @@
 </template>
 
 <page-query>
-query BlogPost ($path: String!) {
-  post: blogPost (path: $path) {
+query Article ($path: String!) {
+  post: article (path: $path) {
     title
     author
     date

@@ -86,7 +86,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Gridsome starter bootstrap'
+    title: 'Home'
   }
 }
 </script>
