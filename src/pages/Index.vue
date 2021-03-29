@@ -3,7 +3,7 @@
     <div>
       <b-card
         overlay
-        img-src="/assets/img/liquidcrystal-homepage.jpg"
+        img-src="/liquidcrystal-homepage.jpg"
         img-alt="Liquid Crystal Membrane"
         text-variant="white"
         sub-title=""
