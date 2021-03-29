@@ -1,6 +1,22 @@
 <template>
   <Layout>
-    <img class="greet-image" src="../../uploads/hello.svg" />
+    <div>
+      <b-card
+        overlay
+        img-src="/assets/img/liquidcrystal-homepage.jpg"
+        img-alt="Liquid Crystal Membrane"
+        text-variant="white"
+        sub-title=""
+        style="max-width: 500px"
+        class="mx-auto"
+        id="title-card"
+      >
+        <b-card-text>
+          <div class="text-center" id="subtitle">Scientific research on liquid crystal membranes and other topics.</div>
+        </b-card-text>
+      </b-card>
+    </div>
+    <p style="text-align:center; font-size: .86rem">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</p>
 
     <h2 class="mb-4">Gridsome starter bootstrap</h2>
     <p>
@@ -92,11 +108,24 @@ export default {
 </script>
 
 <style>
-.greet-image {
-  display: block;
-  margin: auto;
-  width: 90%;
-  max-width: 500px;
-  padding-bottom: 50px;
+@media screen and (min-width: 420px) {
+  #subtitle {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 419px) {
+  #subtitle {
+    font-size: 25px;
+  }
+}
+
+#title-card .card-body {
+    display: flex
+}
+
+#title-card .card-text {
+    display: flex;
+    align-items: center;
 }
 </style>

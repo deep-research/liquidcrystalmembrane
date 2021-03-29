@@ -1,7 +1,8 @@
 <template>
   <Layout>
     <h1 class="mb-4">About</h1>
-    <img class="about-image" src="../../uploads/profile.svg" />
+    <img style="max-width: 200px" class="about-image" src="../../uploads/atom.svg" />
+    <div style="display: none">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, platea elementum mus lectus molestie et. Conubia taciti nunc proin vehicula et nascetur lacinia commodo non, penatibus vel dui pharetra inceptos himenaeos orci viverra ad, quis ullamcorper sit scelerisque nibh praesent imperdiet vulputate.</p>
 

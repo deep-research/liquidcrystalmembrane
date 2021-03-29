@@ -1,8 +1,9 @@
 <template>
   <Layout>
-    <h1 class="mb-4">Contact</h1>
+    <h1 class="mb-4">Contact Form</h1>
     <div>
-      <img class="contact-image mb-4" src="../../uploads/email.svg" />
+      <img class="contact-image mb-4" style="max-width: 200px" src="../../uploads/email.svg" />
+      <div style="display: none">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
       <b-form 
         name="contact"
         method="post"
