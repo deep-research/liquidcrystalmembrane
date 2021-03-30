@@ -3,7 +3,9 @@
     <b-navbar class="p-0 mt-2" toggleable="md" type="light">
         <b-navbar-brand>
         <g-link class="logo-home logo-desktop" to="/">{{ $static.metadata.siteName }}</g-link>
-        <g-link class="logo-home logo–mobile" to="/"><img class="logo-image" alt="logo" src="../favicon.png"></g-link>
+        <g-link class="logo-home logo–mobile" to="/" style="font-size: 18px">
+          Liquid Crystal Membrane
+        </g-link>
       </b-navbar-brand>
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <b-collapse is-nav id="nav_collapse">
