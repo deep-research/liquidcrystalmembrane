@@ -45,4 +45,11 @@ body {
   width: 90vw;
   margin: 0 auto;
 }
+
+::selection {
+  background: #a8d1ff; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #a8d1ff; /* Gecko Browsers */
+}
 </style>

@@ -1,7 +1,11 @@
 <template>
   <Layout>
     <div class="d-flex">
-    <img class="" src="../assets/images/404.svg" />
+    </div>
+    <div style="text-align:center; margin-top: 5vh">
+      <h1>404 Error</h1>
+      <p style="font-size: 30px;">⚠️</p>
+      <h3>Page not found.</h3>
     </div>
   </Layout>
 </template>
