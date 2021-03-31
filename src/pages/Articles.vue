@@ -14,6 +14,7 @@
         <g-link :to="item.node.path">
           <h4 class="mt-0">{{item.node.title}}</h4>
         </g-link>
+        <h6 class="text-dark">By {{item.node.author}} - {{new Date(item.node.date).toLocaleDateString()}}</h6>
         <p class="text-dark">{{item.node.excerpt}}</p>
       </div>
     </div>
