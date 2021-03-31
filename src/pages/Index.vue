@@ -13,7 +13,7 @@
         id="title-card"
       >
         <b-card-text>
-          <span class="text-center" id="subtitle">Scientific research on liquid crystal membranes and other topics.</span>
+          <span class="text-center" id="subtitle">Scientific research on liquid crystal membranes and other related topics.</span>
         </b-card-text>
       </b-card>
     </div>

@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Liquid Crystal Membrane',
-  siteDescription: 'Scientific research on liquid crystal membranes and other topics.',
+  siteDescription: 'Scientific research on liquid crystal membranes and other related topics.',
   siteUrl: 'https://liquidcrystalmembrane.com',
   plugins: [
     {
