@@ -14,7 +14,7 @@
         <g-link :to="item.node.path">
           <h4 class="mt-0">{{item.node.title}}</h4>
         </g-link>
-        <h6 class="text-dark">By {{item.node.author}} - {{item.node.date | luxon}}</h6>
+        <p class="text-dark mb-2" style="font-weight: 500">By {{item.node.author}} - {{item.node.date | luxon}}</p>
         <p class="text-dark">{{item.node.excerpt}}</p>
       </div>
     </div>
