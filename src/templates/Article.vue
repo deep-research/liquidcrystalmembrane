@@ -4,7 +4,7 @@
     <div class="blogPost">
       <h2 v-html="$page.post.title" class="mb-4"/>
       <div><b>Author:</b> {{$page.post.author}}</div>
-      <div><b>Date:</b> {{new Date($page.post.date).toLocaleDateString()}}</div>
+      <div><b>Date:</b> {{$page.post.date | luxon}}</div>
       <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div>
       <BlogContent class="mt-5" :content="$page.post.content"/>
     </div>
