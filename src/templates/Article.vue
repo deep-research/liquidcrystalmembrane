@@ -5,8 +5,9 @@
       <h2 v-html="$page.post.title" class="mb-4"/>
       <div><b>Author:</b> {{$page.post.author}}</div>
       <div><b>Date:</b> {{$page.post.date | luxon}}</div>
-      <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div>
-      <BlogContent class="mt-5" :content="$page.post.content"/>
+      <!-- <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div> -->
+      <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
+      <VueRemarkContent class="mt-5" />
     </div>
   </Layout>
 </template>
@@ -17,7 +18,7 @@ query Article ($path: String!) {
     title
     author
     date
-    timeToRead
+    # timeToRead
     content
     image
   }
@@ -25,12 +26,12 @@ query Article ($path: String!) {
 </page-query>
 
 <script>
-import BlogContent from '@/components/BlogContent'
+// import BlogContent from '@/components/BlogContent'
 
 export default {
-  components: {
-    BlogContent,
-  },
+  // components: {
+  //   BlogContent,
+  // },
   metaInfo() {
     return {
       title: this.$page.post.title,

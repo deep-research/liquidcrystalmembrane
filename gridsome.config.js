@@ -3,17 +3,25 @@ module.exports = {
   siteDescription: 'Scientific research on liquid crystal membranes and other related topics.',
   siteUrl: 'https://liquidcrystalmembrane.com',
   plugins: [
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     path: 'articles/**/*.md',
+    //     typeName: 'Article',
+    //     resolveAbsolutePaths: true,
+    //     remark: {
+    //       externalLinksTarget: '_blank',
+    //       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+    //     },
+    //   },
+    // },
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/vue-remark',
       options: {
-        path: 'articles/**/*.md',
+        baseDir: './articles',
         typeName: 'Article',
-        resolveAbsolutePaths: true,
-        remark: {
-          externalLinksTarget: '_blank',
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-        },
-      },
+        template: './src/templates/Article.vue',
+      }
     },
     {
       use: '@gridsome/plugin-google-analytics',
