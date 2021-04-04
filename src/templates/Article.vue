@@ -2,6 +2,13 @@
   <Layout>
     <!-- <g-image immediate class="blogImage mb-4" :src="$page.post.image" /> -->
     <div class="blogPost">
+      
+      <!-- Breadcrumbs -->
+      <p><a href="/articles">Articles</a> / 
+        {{$page.post.path.slice(10, -1).split("-").join(" ").replace(/\w\S*/g,
+        function(txt) {return txt.charAt(0).toUpperCase() +
+        txt.substr(1).toLowerCase()}).split(" ").join("-")}}</p>
+
       <h2 v-html="$page.post.title" class="mb-4"/>
       <div><b>Author:</b> {{$page.post.author}}</div>
       <div><b>Date:</b> {{$page.post.date | luxon}}</div>
@@ -21,6 +28,7 @@ query Article ($path: String!) {
     # timeToRead
     content
     image
+    path
   }
 }
 </page-query>
