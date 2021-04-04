@@ -3,9 +3,9 @@
     <div class="d-flex">
     </div>
     <div style="text-align:center; margin-top: 5vh">
-      <h1>404 Error</h1>
+      <h2>404 Error</h2>
       <p style="font-size: 30px;">⚠️</p>
-      <h3>Page not found.</h3>
+      <h2>Page not found.</h2>
     </div>
   </Layout>
 </template>
