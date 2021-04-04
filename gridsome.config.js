@@ -20,7 +20,7 @@ module.exports = {
       options: {
         baseDir: './articles',
         typeName: 'Article',
-        template: './src/templates/Article.vue',
+        template: './src/templates/Article.vue'
       }
     },
     {
