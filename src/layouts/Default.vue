@@ -37,6 +37,10 @@ h2 {
   font-size: 30px !important;
 }
 
+p {
+  font-size: 17px;
+}
+
 #app {
   display: flex;
   flex-direction: column;

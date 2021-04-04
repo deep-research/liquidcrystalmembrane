@@ -10,8 +10,8 @@
         txt.substr(1).toLowerCase()}).split(" ").join("-")}}</p>
 
       <h2 v-html="$page.post.title" class="mb-4"/>
-      <div><b>Author:</b> {{$page.post.author}}</div>
-      <div><b>Date:</b> {{$page.post.date | luxon}}</div>
+      <p class="mb-0"><b>Author:</b> {{$page.post.author}}</p>
+      <p><b>Date:</b> {{$page.post.date | luxon}}</p>
       <!-- <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div> -->
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
       <VueRemarkContent class="mt-5" />
