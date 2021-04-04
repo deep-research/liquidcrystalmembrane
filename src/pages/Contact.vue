@@ -185,4 +185,8 @@
   width: 90%;
   max-width: 500px;
 }
+
+form {
+  font-size: 17px;
+}
 </style>
