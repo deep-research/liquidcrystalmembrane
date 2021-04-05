@@ -105,10 +105,6 @@ export default {
   margin-right: 4px;
 }
 
-// .pager-container__link:hover {
-//   opacity: .6
-// }
-
 .pager-container__link {
   transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
@@ -123,5 +119,6 @@ export default {
 
 .pager-container__link:active {
   -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
 }
 </style>
