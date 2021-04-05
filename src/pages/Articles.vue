@@ -113,11 +113,10 @@ export default {
   opacity: 1;
 }
 
-.pager-container__link:hover {
-  opacity: 0.75;
+@media (hover: hover) and (pointer: fine) {
+  .pager-container__link:hover{
+    opacity: 0.75;
+  }
 }
 
-.pager-container__link:active {
-  -webkit-transition: opacity 1s ease-out;
-}
 </style>
