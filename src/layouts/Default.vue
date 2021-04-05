@@ -42,6 +42,16 @@ p {
   font-size: 17px;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  a {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+  }
+}
+
 #app {
   display: flex;
   flex-direction: column;
