@@ -106,7 +106,7 @@ export default {
   margin-right: 4px;
 }
 
-.pager-container__link:hover {
-  opacity: .6
-}
+// .pager-container__link:hover {
+//   opacity: .6
+// }
 </style>
