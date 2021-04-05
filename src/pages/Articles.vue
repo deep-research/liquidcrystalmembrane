@@ -119,6 +119,5 @@ export default {
 
 .pager-container__link:active {
   -webkit-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
 }
 </style>
