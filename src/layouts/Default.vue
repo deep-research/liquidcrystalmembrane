@@ -35,7 +35,7 @@ body {
 }
 
 h2 {
-  font-size: 30px !important;
+  font-size: 28px !important;
 }
 
 p {
