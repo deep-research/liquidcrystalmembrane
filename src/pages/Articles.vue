@@ -84,7 +84,6 @@ export default {
   text-align: center;
   width: 100%;
   color: black;
-  opacity: .9;
 
   &__link {
     text-align: center;
@@ -109,4 +108,20 @@ export default {
 // .pager-container__link:hover {
 //   opacity: .6
 // }
+
+.pager-container__link {
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  opacity: 1;
+}
+
+.pager-container__link:hover {
+  opacity: 0.75;
+}
+
+.pager-container__link:active {
+  -webkit-transition: opacity 1s ease-out;
+}
 </style>
