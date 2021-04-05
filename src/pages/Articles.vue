@@ -105,18 +105,17 @@ export default {
   margin-right: 4px;
 }
 
-.pager-container__link {
-  transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  opacity: 1;
-}
-
 @media (hover: hover) and (pointer: fine) {
+  .pager-container__link {
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    opacity: 1;
+  }
+
   .pager-container__link:hover{
     opacity: 0.75;
   }
 }
-
 </style>

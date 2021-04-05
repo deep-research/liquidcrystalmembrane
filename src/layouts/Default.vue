@@ -24,6 +24,7 @@ export default {
 <style lang="scss">
 body, html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
