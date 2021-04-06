@@ -1,12 +1,16 @@
 <template>
   <Layout>
-    <h2 class="my-4 mb-5">Articles</h2>
+    <h2 class="my-4">Articles</h2>
 
-    <div
-      v-for="item in $page.posts.edges"
-      :key="item.node.id"
-      class="blog-post"
-    >
+    <b-input-group size="md" style="max-width: 400px">
+      <b-input-group-prepend is-text>
+        <b-icon icon="search"></b-icon>
+      </b-input-group-prepend>
+      <b-form-input type="search" name="search" id="search" placeholder="Search terms" v-model="search"></b-form-input>
+    </b-input-group>
+
+    <div v-if="searchResults.length > 0">
+        <article v-for="item in searchResults" :key="item.node.id">
       <div class="media my-5">
         <!-- <g-image immediate :src="item.node.image" class="mr-3" alt="image" /> -->
         <div class="media-body">
@@ -17,17 +21,18 @@
           <p class="text-dark">{{item.node.excerpt}}</p>
         </div>
       </div>
+        </article>
     </div>
 
-    <Pager :info="$page.posts.pageInfo"
-       class="pager-container"
-       linkClass="pager-container__link"  />
+    <div class="my-4" v-else>
+        <p>Your search didn't return any results. Please try again.</p>
+    </div>
   </Layout>
 </template>
 
 <page-query>
-query ($page: Int) {
-	posts: allArticle(sortBy: "date", perPage: 3, page: $page) @paginate {
+query {
+  posts: allArticle(sortBy: "date") {
     edges {
       node {
         id
@@ -37,6 +42,7 @@ query ($page: Int) {
         image
         author
         date
+        content
       }
     }
     pageInfo {
@@ -62,6 +68,18 @@ export default {
   },
   components: {
     Pager
+  },
+  data() {
+    return {
+      search: ''
+    }
+  },
+  computed: {
+    searchResults() {
+      return this.$page.posts.edges.filter(post => {
+          return post.node.title.toLowerCase().includes(this.search.toLowerCase().trim())
+      })
+    }
   }
 }
 </script>
