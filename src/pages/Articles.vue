@@ -23,12 +23,14 @@
           </div>
         </div>
       </article>
-      <b-pagination
-        :total-rows="totalRows" 
-        v-model="currentPage"
-        :per-page="perPage"
-        class="mb-0"
-      />
+      <div v-if="searchResults.length > perPage">
+        <b-pagination
+          :total-rows="totalRows" 
+          v-model="currentPage"
+          :per-page="perPage"
+          class="mb-0"
+        />
+      </div>
     </div>
 
     <div class="my-4" v-else>
@@ -80,7 +82,7 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 3
+      perPage: 5
     }
   },
   computed: {
