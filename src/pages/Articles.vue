@@ -80,7 +80,7 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 1
+      perPage: 3
     }
   },
   computed: {
