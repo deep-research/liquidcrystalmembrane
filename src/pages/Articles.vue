@@ -6,11 +6,12 @@
       <b-input-group-prepend is-text>
         <b-icon icon="search"></b-icon>
       </b-input-group-prepend>
-      <b-form-input type="search" name="search" id="search" placeholder="Search terms" v-model="search"></b-form-input>
+      <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
     </b-input-group>
 
     <div v-if="searchResults.length > 0">
-        <article v-for="item in searchResults" :key="item.node.id">
+      <p class="mt-4 mb-0">{{searchResults.length}} articles found.</p>
+      <article v-for="item in searchResults" :key="item.node.id">
       <div class="media my-5">
         <!-- <g-image immediate :src="item.node.image" class="mr-3" alt="image" /> -->
         <div class="media-body">
