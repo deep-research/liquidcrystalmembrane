@@ -11,18 +11,24 @@
 
     <div v-if="searchResults.length > 0">
       <p class="mt-4 mb-0">{{searchResults.length}} articles found.</p>
-      <article v-for="item in searchResults" :key="item.node.id">
-      <div class="media my-5">
-        <!-- <g-image immediate :src="item.node.image" class="mr-3" alt="image" /> -->
-        <div class="media-body">
-          <g-link :to="item.node.path">
-            <h4 class="mt-0">{{item.node.title}}</h4>
-          </g-link>
-          <p class="text-dark mb-2" style="font-weight: 500">By {{item.node.author}} - {{item.node.date | luxon}}</p>
-          <p class="text-dark">{{item.node.excerpt}}</p>
+      <article v-for="item in lists" :key="item.node.id">
+        <div class="media my-5">
+          <!-- <g-image immediate :src="item.node.image" class="mr-3" alt="image" /> -->
+          <div class="media-body">
+            <g-link :to="item.node.path">
+              <h4 class="mt-0">{{item.node.title}}</h4>
+            </g-link>
+            <p class="text-dark mb-2" style="font-weight: 500">By {{item.node.author}} - {{item.node.date | luxon}}</p>
+            <p class="text-dark">{{item.node.excerpt}}</p>
+          </div>
         </div>
-      </div>
-        </article>
+      </article>
+      <b-pagination
+        :total-rows="totalRows" 
+        v-model="currentPage"
+        :per-page="perPage"
+        class="mb-0"
+      />
     </div>
 
     <div class="my-4" v-else>
@@ -72,7 +78,9 @@ export default {
   },
   data() {
     return {
-      search: ''
+      search: '',
+      currentPage: 1,
+      perPage: 1
     }
   },
   computed: {
@@ -92,6 +100,17 @@ export default {
             return (this.$luxon(post.node.date)).toLowerCase().includes(search)
           }
       })
+    },
+    lists() {
+      const items = this.searchResults
+
+      return items.slice(
+        (this.currentPage - 1) * this.perPage,
+        this.currentPage * this.perPage
+      )
+    },
+    totalRows() {
+      return this.searchResults.length
     }
   }
 }
