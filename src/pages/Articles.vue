@@ -78,7 +78,19 @@ export default {
   computed: {
     searchResults() {
       return this.$page.posts.edges.filter(post => {
-          return post.node.title.toLowerCase().includes(this.search.toLowerCase().trim())
+          let search = this.search.toLowerCase().trim()
+
+          if (post.node.title.toLowerCase().includes(search)) {
+            return post.node.title.toLowerCase().includes(search)
+          } else if (post.node.excerpt.toLowerCase().includes(search)) {
+            return post.node.excerpt.toLowerCase().includes(search)
+          } else if (post.node.author.toLowerCase().includes(search)) {
+            return post.node.author.toLowerCase().includes(search)
+          } else if (post.node.content.toLowerCase().includes(search)) {
+            return post.node.content.toLowerCase().includes(search)
+          } else if (this.$luxon(post.node.date).toLowerCase().includes(search)) {
+            return (this.$luxon(post.node.date)).toLowerCase().includes(search)
+          }
       })
     }
   }
