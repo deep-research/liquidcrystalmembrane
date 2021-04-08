@@ -10,7 +10,12 @@
     </b-input-group>
 
     <div v-if="searchResults.length > 0">
-      <p class="mt-4 mb-0">{{searchResults.length}} articles found.</p>
+      <div v-if="searchResults.length == 1">
+        <p class="mt-4 mb-0">1 article found.</p>
+      </div>
+      <div v-else>
+        <p class="mt-4 mb-0">{{searchResults.length}} articles found.</p>
+      </div>
       <article v-for="item in lists" :key="item.node.id">
         <div class="media my-5">
           <!-- <g-image immediate :src="item.node.image" class="mr-3" alt="image" /> -->
