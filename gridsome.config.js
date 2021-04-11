@@ -23,6 +23,22 @@ module.exports = {
         template: './src/templates/Article.vue',
         pathPrefix: '/articles/',
         // route: '/articles/:author/:path',
+        resolveAbsolutePaths: true,
+        refs: {
+          categories: {
+            typeName: 'Category',
+            create: true
+          }
+        }
+      }
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        baseDir: './categories',
+        typeName: 'Category',
+        template: './src/templates/Category.vue',
+        pathPrefix: '/categories/',
         resolveAbsolutePaths: true
       }
     },
