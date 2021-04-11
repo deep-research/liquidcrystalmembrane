@@ -25,21 +25,12 @@ module.exports = {
         // route: '/articles/:author/:path',
         resolveAbsolutePaths: true,
         refs: {
-          categories: {
+          category: {
             typeName: 'Category',
-            create: true
+            create: true,
+            // route: '/categories/:title'
           }
         }
-      }
-    },
-    {
-      use: '@gridsome/vue-remark',
-      options: {
-        baseDir: './categories',
-        typeName: 'Category',
-        template: './src/templates/Category.vue',
-        pathPrefix: '/categories/',
-        resolveAbsolutePaths: true
       }
     },
     {
@@ -55,6 +46,9 @@ module.exports = {
       }
     }
   ],
+  templates: {
+    Category: '/categories/:title',
+  },
   css: {
     loaderOptions: {
       scss: {

@@ -4,7 +4,7 @@ excerpt: Id roast latte, grounds turkish sweet skinny strong medium. Bar, sit, g
 date: 2021-03-21 17:00:00 +0000
 author: Arkady Fisher
 image: "/uploads/coffee.svg"
-category: art
+category: Art
 ---
 
 Foam, cultivar chicory grounds crema java wings. Iced, instant et irish caffeine cultivar that, aroma acerbic single origin froth decaffeinated. Blue mountain foam white qui to go filter saucer con panna foam black.
