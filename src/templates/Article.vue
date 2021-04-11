@@ -20,6 +20,8 @@
 </template>
 
 <page-query>
+# query Article ($id: ID!) {
+#   post: article (id: $id) {
 query Article ($path: String!) {
   post: article (path: $path) {
     title

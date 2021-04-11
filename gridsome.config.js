@@ -21,7 +21,8 @@ module.exports = {
         baseDir: './articles',
         typeName: 'Article',
         template: './src/templates/Article.vue',
-        pathPrefix: '/articles',
+        pathPrefix: '/articles/',
+        // route: '/articles/:author/:path',
         resolveAbsolutePaths: true
       }
     },
