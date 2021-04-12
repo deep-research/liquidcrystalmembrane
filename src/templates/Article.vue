@@ -10,12 +10,12 @@
         txt.substr(1).toLowerCase()}).split(" ").join("-")}}</p>
 
       <h2 v-html="$page.post.title" />
-      <p class="mb-2" style="font-size: 22px">By {{$page.post.author}} - {{$page.post.date | luxon}}</p>
+      <p class="mb-2" style="font-size: 20px">By {{$page.post.author}} - {{$page.post.date | luxon}}</p>
       <p v-if="$page.post.category" class="mb-0"><span style="font-weight: 500">Category:</span> {{$page.post.category.title}}</p>
       <p v-if="this.getTags()" class="mb-0"><span style="font-weight: 500">Tags:</span> {{this.getTags()}}</p>
       <!-- <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div> -->
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
-      <VueRemarkContent class="mt-4" />
+      <VueRemarkContent class="mt-5" />
     </div>
   </Layout>
 </template>
