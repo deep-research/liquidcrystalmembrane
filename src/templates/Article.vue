@@ -9,11 +9,10 @@
         function(txt) {return txt.charAt(0).toUpperCase() +
         txt.substr(1).toLowerCase()}).split(" ").join("-")}}</p>
 
-      <h2 v-html="$page.post.title" class="mb-4"/>
-      <p class="mb-0"><b>Author:</b> {{$page.post.author}}</p>
-      <p class="mb-0"><b>Date:</b> {{$page.post.date | luxon}}</p>
-      <p v-if="$page.post.category" class="mb-0"><b>Category:</b> {{$page.post.category.title}}</p>
-      <p v-if="this.getTags()" class="mb-0"><b>Tags:</b> {{this.getTags()}}</p>
+      <h2 v-html="$page.post.title" />
+      <p class="mb-2" style="font-size: 22px">By {{$page.post.author}} - {{$page.post.date | luxon}}</p>
+      <p v-if="$page.post.category" class="mb-0"><span style="font-weight: 500">Category:</span> {{$page.post.category.title}}</p>
+      <p v-if="this.getTags()" class="mb-0"><span style="font-weight: 500">Tags:</span> {{this.getTags()}}</p>
       <!-- <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div> -->
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
       <VueRemarkContent class="mt-5" />

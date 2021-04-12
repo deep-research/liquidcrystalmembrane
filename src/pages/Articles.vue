@@ -23,8 +23,10 @@
             <g-link :to="item.node.path">
               <h4 class="mt-0">{{item.node.title}}</h4>
             </g-link>
-            <p class="text-dark mb-2" style="font-weight: 500">By {{item.node.author}} - {{item.node.date | luxon}}</p>
-            <p class="text-dark">{{item.node.excerpt}}</p>
+            <p style="font-size: 19px">By {{item.node.author}} - {{item.node.date | luxon}}</p>
+            <p>{{item.node.excerpt}}</p>
+            <p v-if="item.node.category" class="mb-0"><span style="font-weight: 500">Category:</span> {{item.node.category.title}}</p>
+            <p v-if="getTags(item.node.tags)" class="mb-0"><span style="font-weight: 500">Tags:</span> {{getTags(item.node.tags)}}</p>
           </div>
         </div>
       </article>
@@ -60,17 +62,10 @@ query {
         category {
           title
         }
+        tags {
+          title
+        }
       }
-    }
-    pageInfo {
-      perPage
-      currentPage
-      totalPages
-      totalItems
-      hasPreviousPage
-      hasNextPage
-      isFirst
-      isLast
     }
   }
 }
@@ -91,6 +86,16 @@ export default {
       search: '',
       currentPage: 1,
       perPage: 5
+    }
+  },
+  methods: {
+    getTags(data) {
+      let tags = []
+      data.forEach(tag => {
+        tags.push(tag.title)
+      })
+        
+      return(tags.join(', '))
     }
   },
   computed: {
