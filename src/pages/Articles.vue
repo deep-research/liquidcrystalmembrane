@@ -26,7 +26,7 @@
             <p  class="mb-2" style="font-size: 20px">By {{item.node.author}} - {{item.node.date | luxon}}</p>
             <p class="mb-0">{{item.node.excerpt}}</p>
             <p v-if="item.node.category" class="mb-0 mt-1"><span style="font-weight: 500">Category:</span> {{item.node.category.title}}</p>
-            <p v-if="getTags(item.node.tags)" class="mb-0 mt-1"><span style="font-weight: 500">Tags:</span> {{getTags(item.node.tags)}}</p>
+            <p v-if="getTagsString(item.node.tags)" class="mb-0 mt-1"><span style="font-weight: 500">Tags:</span> {{getTagsString(item.node.tags)}}</p>
           </div>
         </div>
       </article>
@@ -89,13 +89,21 @@ export default {
     }
   },
   methods: {
-    getTags(data) {
+    getTagsString(data) {
       let tags = []
       data.forEach(tag => {
         tags.push(tag.title)
       })
         
       return(tags.join(', '))
+    },
+    getTagsLowercaseArray(data) {
+      let tags = []
+      data.forEach(tag => {
+        tags.push(tag.title.toLowerCase())
+      })
+        
+      return(tags)
     }
   },
   computed: {
@@ -113,6 +121,8 @@ export default {
             return post.node.content.toLowerCase().includes(search)
           } else if (post.node.category.title.toLowerCase().includes(search)) {
             return post.node.category.title.toLowerCase().includes(search)
+          } else if (this.getTagsLowercaseArray(post.node.tags).find(element => element.includes(search))) {
+            return this.getTagsLowercaseArray(post.node.tags).find(element => element.includes(search))
           } else if (this.$luxon(post.node.date).toLowerCase().includes(search)) {
             return (this.$luxon(post.node.date)).toLowerCase().includes(search)
           }
