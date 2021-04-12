@@ -15,7 +15,7 @@
       <p v-if="this.getTags()" class="mb-0"><span style="font-weight: 500">Tags:</span> {{this.getTags()}}</p>
       <!-- <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div> -->
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
-      <VueRemarkContent class="mt-5" />
+      <VueRemarkContent class="mt-4" />
     </div>
   </Layout>
 </template>
