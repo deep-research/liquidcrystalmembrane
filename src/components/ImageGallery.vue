@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-4">
     <b-carousel
       id="carousel-1"
       v-model="slide"
