@@ -27,7 +27,7 @@ module.exports = {
         refs: {
           category: {
             typeName: 'Category',
-            create: true,
+            create: true
             // route: '/categories/:title'
           }
         }
