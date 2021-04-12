@@ -11,7 +11,9 @@
 
       <h2 v-html="$page.post.title" class="mb-4"/>
       <p class="mb-0"><b>Author:</b> {{$page.post.author}}</p>
-      <p><b>Date:</b> {{$page.post.date | luxon}}</p>
+      <p class="mb-0"><b>Date:</b> {{$page.post.date | luxon}}</p>
+      <p v-if="$page.post.category" class="mb-0"><b>Category:</b> {{$page.post.category.title}}</p>
+      <p v-if="this.getTags()" class="mb-0"><b>Tags:</b> {{this.getTags()}}</p>
       <!-- <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div> -->
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
       <VueRemarkContent class="mt-5" />
@@ -31,6 +33,12 @@ query Article ($path: String!) {
     content
     image
     path
+    category {
+      title
+    }
+    tags {
+      title
+    }
   }
 }
 </page-query>
@@ -47,6 +55,16 @@ export default {
       title: this.$page.post.title,
     }
   },
+  methods: {
+    getTags () {
+      let tags = []
+      this.$page.post.tags.forEach(tag => {
+        tags.push(tag.title)
+      })
+        
+      return(tags.join(', '))
+    }
+  }
 }
 </script>
 
