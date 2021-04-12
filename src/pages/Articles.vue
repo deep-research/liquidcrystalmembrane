@@ -85,7 +85,7 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 4
+      perPage: 5
     }
   },
   methods: {
