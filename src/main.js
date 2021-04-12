@@ -7,6 +7,9 @@ import VueLuxon from "vue-luxon";
 
 import VuePaginate from 'vue-paginate'
 
+import vSelect from "vue-select";
+import "vue-select/dist/vue-select.css";
+
 import checkIfMobile from './mixins/checkIfMobile'
 
 export default function (Vue, { router, head, isClient }) {
@@ -21,6 +24,8 @@ export default function (Vue, { router, head, isClient }) {
     },
     output: "date_short"
   });
+
+  Vue.component("v-select", vSelect);
 
   Vue.component('Layout', DefaultLayout)
   Vue.mixin(checkIfMobile)

@@ -29,6 +29,11 @@ module.exports = {
             typeName: 'Category',
             create: true
             // route: '/categories/:title'
+          },
+          tags: {
+            typeName: 'Tag',
+            create: true
+            // route: '/tags/:title'
           }
         }
       }
@@ -48,6 +53,7 @@ module.exports = {
   ],
   templates: {
     Category: '/categories/:title',
+    Tag: '/tags/:title'
   },
   css: {
     loaderOptions: {
