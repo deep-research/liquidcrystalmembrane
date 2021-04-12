@@ -23,7 +23,14 @@ module.exports = {
         template: './src/templates/Article.vue',
         pathPrefix: '/articles/',
         // route: '/articles/:author/:path',
-        resolveAbsolutePaths: true
+        resolveAbsolutePaths: true,
+        refs: {
+          category: {
+            typeName: 'Category',
+            create: true
+            // route: '/categories/:title'
+          }
+        }
       }
     },
     {
@@ -39,6 +46,9 @@ module.exports = {
       }
     }
   ],
+  templates: {
+    Category: '/categories/:title',
+  },
   css: {
     loaderOptions: {
       scss: {

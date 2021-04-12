@@ -57,6 +57,9 @@ query {
         author
         date
         content
+        category {
+          title
+        }
       }
     }
     pageInfo {
@@ -103,6 +106,8 @@ export default {
             return post.node.author.toLowerCase().includes(search)
           } else if (post.node.content.toLowerCase().includes(search)) {
             return post.node.content.toLowerCase().includes(search)
+          } else if (post.node.category.title.toLowerCase().includes(search)) {
+            return post.node.category.title.toLowerCase().includes(search)
           } else if (this.$luxon(post.node.date).toLowerCase().includes(search)) {
             return (this.$luxon(post.node.date)).toLowerCase().includes(search)
           }
