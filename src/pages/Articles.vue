@@ -24,9 +24,9 @@
               <h4 class="mt-0">{{item.node.title}}</h4>
             </g-link>
             <p  class="mb-2" style="font-size: 20px">By {{item.node.author}} - {{item.node.date | luxon}}</p>
-            <p  class="mb-2">{{item.node.excerpt}}</p>
-            <p v-if="item.node.category" class="mb-0"><span style="font-weight: 500">Category:</span> {{item.node.category.title}}</p>
-            <p v-if="getTags(item.node.tags)" class="mb-0"><span style="font-weight: 500">Tags:</span> {{getTags(item.node.tags)}}</p>
+            <p class="mb-0">{{item.node.excerpt}}</p>
+            <p v-if="item.node.category" class="mb-0 mt-1"><span style="font-weight: 500">Category:</span> {{item.node.category.title}}</p>
+            <p v-if="getTags(item.node.tags)" class="mb-0 mt-1"><span style="font-weight: 500">Tags:</span> {{getTags(item.node.tags)}}</p>
           </div>
         </div>
       </article>
