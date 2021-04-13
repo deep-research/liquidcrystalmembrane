@@ -67,7 +67,7 @@
             :loadRecaptchaScript="true"
             @verify="onVerify">
           </vue-recaptcha>
-          <div style="color: red" v-if="this.validation.captchaError">Please fill out the captcha.</div>
+          <div style="color: red" v-if="this.validation.captchaError">Please fill out the Captcha.</div>
         </div>
         <b-button type="submit" variant="primary">Submit</b-button>
       </b-form>
