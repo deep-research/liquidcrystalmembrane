@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <p><a href="/articles">Articles</a> / Categories</p>
     <h2 class="my-4 mb-5">Categories</h2>
 
     <div

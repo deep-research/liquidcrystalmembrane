@@ -52,8 +52,8 @@ module.exports = {
     }
   ],
   templates: {
-    Category: '/categories/:title',
-    Tag: '/tags/:title'
+    Category: '/articles/categories/:title',
+    Tag: '/articles/tags/:title'
   },
   css: {
     loaderOptions: {

@@ -10,8 +10,8 @@
     </b-input-group>
 
     <div class="mt-2">
-      <g-link to="/categories">Search by Category</g-link> -
-      <g-link to="/tags">Search by Tag</g-link>
+      <g-link to="/articles/categories">Search by Category</g-link> -
+      <g-link to="/articles/tags">Search by Tag</g-link>
     </div>
 
     <div v-if="searchResults.length > 0">
@@ -32,13 +32,13 @@
             <p class="mb-0">{{item.node.excerpt}}</p>
             <p v-if="item.node.category" class="mb-0 mt-1">
               <span style="font-weight: 500">
-                  <g-link to="/categories" v-b-tooltip.hover title="All Categories">Category</g-link>:
+                  <g-link to="/articles/categories" v-b-tooltip.hover title="All Categories">Category</g-link>:
               </span>
               <g-link :to="item.node.category.path">{{item.node.category.title}}</g-link>
             </p>
             <p v-if="item.node.tags.length > 0" class="mb-0 mt-1">
               <span style="font-weight: 500">
-                <g-link to="/tags" v-b-tooltip.hover title="All Tags">Tags</g-link>:
+                <g-link to="/articles/tags" v-b-tooltip.hover title="All Tags">Tags</g-link>:
               </span>
               <span v-for="(tag, index) in item.node.tags" :key="index">
                 <g-link :to="tag.path">{{tag.title}}</g-link>

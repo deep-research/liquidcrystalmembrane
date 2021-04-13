@@ -4,7 +4,8 @@
     <div class="blogarticle">
       
       <!-- Breadcrumbs -->
-      <p><a href="/categories">Categories</a> / 
+      <p><a href="/articles/">Articles</a> / 
+        <a href="/articles/categories">Categories</a> / 
         {{$page.category.title}}</p>
 
       <h2 class="mb-4">{{$page.category.title}}</h2>

@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <p><a href="/articles">Articles</a> / Tags</p>
     <h2 class="my-4 mb-5">Tags</h2>
 
     <div
