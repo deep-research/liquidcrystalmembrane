@@ -4,7 +4,7 @@ excerpt: Id roast latte, grounds turkish sweet skinny strong medium. Bar, sit, g
 date: 2021-03-21 20:00
 author: Arkady Fisher
 image: "/uploads/coffee.svg"
-category: Art
+category: Chemistry
 tags: ["Business", "News", "Study"]
 ---
 
