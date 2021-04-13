@@ -25,8 +25,21 @@
             </g-link>
             <p  class="mb-2" style="font-size: 20px">By {{item.node.author}} - {{item.node.date | luxon}}</p>
             <p class="mb-0">{{item.node.excerpt}}</p>
-            <p v-if="item.node.category" class="mb-0 mt-1"><span style="font-weight: 500">Category:</span> {{item.node.category.title}}</p>
-            <p v-if="getTagsString(item.node.tags)" class="mb-0 mt-1"><span style="font-weight: 500">Tags:</span> {{getTagsString(item.node.tags)}}</p>
+            <p v-if="item.node.category" class="mb-0 mt-1">
+              <span style="font-weight: 500">
+                  <g-link to="/categories">Category</g-link>:
+              </span>
+              <g-link :to="item.node.category.path">{{item.node.category.title}}</g-link>
+            </p>
+            <p v-if="item.node.tags.length > 0" class="mb-0 mt-1">
+              <span style="font-weight: 500">
+                <g-link to="/tags">Tags</g-link>:
+              </span>
+              <span v-for="(tag, index) in item.node.tags" :key="index">
+                <g-link :to="tag.path">{{tag.title}}</g-link>
+                <span v-if="index+1 < item.node.tags.length">, </span>
+              </span>
+            </p>
           </div>
         </div>
       </article>
@@ -61,9 +74,11 @@ query {
         content
         category {
           title
+          path
         }
         tags {
           title
+          path
         }
       }
     }
@@ -89,14 +104,6 @@ export default {
     }
   },
   methods: {
-    getTagsString(data) {
-      let tags = []
-      data.forEach(tag => {
-        tags.push(tag.title)
-      })
-        
-      return(tags.join(', '))
-    },
     getTagsLowercaseArray(data) {
       let tags = []
       data.forEach(tag => {

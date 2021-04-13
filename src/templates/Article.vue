@@ -20,8 +20,8 @@
         <span style="font-weight: 500">
           <g-link to="/tags">Tags</g-link>:
         </span>
-          <span v-for="(tag, index) in $page.post.tags" :key="index">
-            <g-link :to="tag.path">{{tag.title}}</g-link>
+        <span v-for="(tag, index) in $page.post.tags" :key="index">
+          <g-link :to="tag.path">{{tag.title}}</g-link>
           <span v-if="index+1 < $page.post.tags.length">, </span>
         </span>
       </p>
