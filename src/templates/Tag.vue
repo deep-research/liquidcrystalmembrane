@@ -69,7 +69,7 @@ query Tags ($id: ID!) {
   tag (id: $id) {
     title
     path
-    belongsTo {
+    belongsTo(sortBy: "date", order: DESC) {
       edges {
         node {
           ...on Article {
@@ -113,7 +113,7 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 3
+      perPage: 2
     }
   },
   methods: {

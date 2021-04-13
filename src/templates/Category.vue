@@ -69,7 +69,7 @@ query Categories ($id: ID!) {
   category (id: $id) {
     title
     path
-    belongsTo {
+    belongsTo(sortBy: "date", order: DESC) {
       edges {
         node {
           ...on Article {

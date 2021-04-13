@@ -65,7 +65,7 @@
 
 <page-query>
 query {
-  posts: allArticle(sortBy: "date") {
+  posts: allArticle(sortBy: "date", order: DESC) {
     edges {
       node {
         id
