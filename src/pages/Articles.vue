@@ -27,13 +27,13 @@
             <p class="mb-0">{{item.node.excerpt}}</p>
             <p v-if="item.node.category" class="mb-0 mt-1">
               <span style="font-weight: 500">
-                  <g-link to="/categories">Category</g-link>:
+                  <g-link to="/categories" v-b-tooltip.hover title="All Categories">Category</g-link>:
               </span>
               <g-link :to="item.node.category.path">{{item.node.category.title}}</g-link>
             </p>
             <p v-if="item.node.tags.length > 0" class="mb-0 mt-1">
               <span style="font-weight: 500">
-                <g-link to="/tags">Tags</g-link>:
+                <g-link to="/tags" v-b-tooltip.hover title="All Tags">Tags</g-link>:
               </span>
               <span v-for="(tag, index) in item.node.tags" :key="index">
                 <g-link :to="tag.path">{{tag.title}}</g-link>
