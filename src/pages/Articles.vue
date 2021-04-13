@@ -9,6 +9,11 @@
       <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
     </b-input-group>
 
+    <div class="mt-2">
+      <g-link to="/categories">Search by Category</g-link> -
+      <g-link to="/tags">Search by Tag</g-link>
+    </div>
+
     <div v-if="searchResults.length > 0">
       <div v-if="searchResults.length == 1">
         <p class="mt-4 mb-0">1 article found.</p>
