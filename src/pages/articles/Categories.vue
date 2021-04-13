@@ -17,6 +17,13 @@
       stacked
     ></b-form-radio-group>
 
+    <div v-if="$page.categories.edges.length == 1">
+      <p class="mt-4 mb-0">1 category found.</p>
+    </div>
+    <div v-else>
+      <p class="mt-4 mb-0">{{$page.categories.edges.length}} categories found.</p>
+    </div>
+
     <div
       v-for="item in lists"
       :key="item.node.id"

@@ -2,12 +2,19 @@
   <Layout>
     <h2 class="my-4">Articles</h2>
 
-    <b-input-group size="md" style="max-width: 400px">
-      <b-input-group-prepend is-text>
-        <b-icon icon="search"></b-icon>
-      </b-input-group-prepend>
-      <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
-    </b-input-group>
+    <div style="max-width: 400px">
+      <b-input-group size="md">
+        <b-input-group-prepend is-text>
+          <b-icon icon="search"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
+      </b-input-group>
+      <v-select :options="getTaxonomyArray($page.categories.edges)" class="mt-2"></v-select>
+      <v-select :options="getTaxonomyArray($page.tags.edges)" class="mt-2"></v-select>
+    </div>
+
+    <!-- <button type="button" v-on:click="resetData" class="text-left px-4 py-2 text-sm font-semibold w-full md:w-auto rounded-sm hover:bg-gray-300 focus:bg-gray-200 bg-gray-200 block md:inline mt-4 md:mt-0">Refresh</button> -->
+    <b-button variant="primary" class="mt-2">Clear</b-button>
 
     <div class="mt-2">
       <g-link to="/articles/categories">Search by Category</g-link> -
@@ -87,6 +94,24 @@ query {
       }
     }
   }
+	categories: allCategory {
+    edges {
+      node {
+        id
+        path
+        title
+      }
+    }
+  }
+	tags: allTag {
+    edges {
+      node {
+        id
+        path
+        title
+      }
+    }
+  }
 }
 </page-query>
 
@@ -113,8 +138,14 @@ export default {
       data.forEach(tag => {
         tags.push(tag.title.toLowerCase())
       })
-        
       return(tags)
+    },
+    getTaxonomyArray(data) {
+      let array = []
+      data.forEach(element => {
+        array.push(element.node.title)
+      })
+      return(array)
     }
   },
   computed: {
