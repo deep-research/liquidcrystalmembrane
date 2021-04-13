@@ -1,7 +1,7 @@
 ---
 title: Liquid Crystal Membranes as a Biosensor
 excerpt: Id roast latte, grounds turkish sweet skinny strong medium. Bar, sit, grinder cinnamon viennese redeye aroma blue mountain.
-date: 2021-03-21 18:00
+date: 2021-03-22 18:00
 author: Arkady Fisher
 image: "/uploads/coffee.svg"
 category: Chemistry

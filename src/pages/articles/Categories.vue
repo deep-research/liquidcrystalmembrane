@@ -3,6 +3,10 @@
     <p><a href="/articles">Articles</a> / Categories</p>
     <h2>Categories</h2>
 
+    <div class="mt-2">
+      <g-link to="/articles/tags">Search by Tag</g-link>
+    </div>
+
     <b-form-radio-group
       v-model="selected"
       :options="options"
