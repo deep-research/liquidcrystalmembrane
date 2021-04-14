@@ -9,8 +9,8 @@
         </b-input-group-prepend>
         <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
       </b-input-group>
-      <v-select :options="getCategoriesArray($page.categories.edges)" v-model="categoryFilter" class="mt-2"></v-select>
-      <v-select :options="getTagsArray($page.tags.edges)" v-model="tagFilter" class="mt-2"></v-select>
+      <v-select :options="getCategoriesArray($page.categories.edges)" v-model="categoryFilter" :clearable="false" class="mt-2"></v-select>
+      <v-select :options="getTagsArray($page.tags.edges)" v-model="tagFilter" :clearable="false" class="mt-2"></v-select>
     </div>
 
     <b-button variant="primary" class="mt-2" @click="resetData">Clear</b-button>
@@ -93,7 +93,7 @@ query {
       }
     }
   }
-	categories: allCategory {
+	categories: allCategory(sortBy: "title", order: ASC) {
     edges {
       node {
         id
@@ -102,7 +102,7 @@ query {
       }
     }
   }
-	tags: allTag {
+	tags: allTag(sortBy: "title", order: ASC) {
     edges {
       node {
         id
