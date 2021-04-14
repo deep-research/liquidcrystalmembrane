@@ -13,7 +13,8 @@
     </div>
     <div class="mt-2">
       <b-button @click="resetData">Clear</b-button>
-      <b-button  variant="primary" @click="resetData" g-link to="/articles/tags" class="ml-2">Search by Tag</b-button>
+      <b-button  variant="primary" g-link to="/articles/tags" class="ml-2">Search by Tag</b-button>
+      <b-button  variant="primary" g-link to="/articles/" class="ml-2">Search by Article</b-button>
     </div>
 
     <b-form-radio-group
