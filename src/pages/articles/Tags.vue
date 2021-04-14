@@ -14,7 +14,7 @@
     <div class="mt-2">
       <b-button @click="resetData">Clear</b-button>
       <b-button variant="primary" g-link to="/articles/categories" class="ml-2">Search by Category</b-button>
-      <b-button  variant="primary" g-link to="/articles/" class="ml-2">Search by Article</b-button>
+      <!-- <b-button  variant="primary" g-link to="/articles/" class="ml-2">Search by Article</b-button> -->
     </div>
 
     <b-form-radio-group

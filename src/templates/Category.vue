@@ -3,17 +3,16 @@
     <p><a href="/articles">Articles</a> / <a href="/articles/categories">Categories</a> / {{$page.category.title}}</p>
     <h2 class="my-4">Category: {{$page.category.title}}</h2>
 
-    <b-input-group size="md" style="max-width: 400px">
-      <b-input-group-prepend is-text>
-        <b-icon icon="search"></b-icon>
-      </b-input-group-prepend>
-      <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
-    </b-input-group>
-
-    <!-- <div class="mt-2">
-      <g-link to="/articles/categories">Search by Category</g-link> -
-      <g-link to="/articles/tags">Search by Tag</g-link>
-    </div> -->
+    <div style="max-width: 400px">
+      <b-input-group size="md">
+        <b-input-group-prepend is-text>
+          <b-icon icon="search"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
+      </b-input-group>
+      <v-select :options="tagsFound()" v-model="tagFilter" :clearable="false" class="mt-2"></v-select>
+    </div>
+    <b-button @click="resetData" class="mt-2">Clear</b-button>
 
     <div v-if="searchResults.length > 0">
       <div v-if="searchResults.length == 1">
@@ -24,7 +23,6 @@
       </div>
       <article v-for="item in lists" :key="item.node.id">
         <div class="media my-5">
-          <!-- <g-image immediate :src="item.node.image" class="mr-3" alt="image" /> -->
           <div class="media-body">
             <g-link :to="item.node.path">
               <h4 class="mt-0">{{item.node.title}}</h4>
@@ -113,7 +111,8 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 3
+      perPage: 2,
+      tagFilter: "All Tags"
     }
   },
   methods: {
@@ -124,27 +123,49 @@ export default {
       })
         
       return(tags)
-    }
+    },
+    resetData () {
+      Object.assign(this.$data, this.$options.data.apply(this))
+      this.mounted = true
+    },
+    tagsFound() {
+      let array = []
+      this.$page.category.belongsTo.edges.forEach(article => {
+        article.node.tags.forEach(tag => {
+          array.push(tag.title)
+        })
+      })
+      for (let i in array) {
+        array = [...new Set(array)]
+      }
+      array.unshift("All Tags")
+      return array.sort()
+    },
   },
   computed: {
     searchResults() {
       return this.$page.category.belongsTo.edges.filter(article => {
           let search = this.search.toLowerCase().trim()
 
-          if (article.node.title.toLowerCase().includes(search)) {
-            return article.node.title.toLowerCase().includes(search)
-          } else if (article.node.excerpt.toLowerCase().includes(search)) {
-            return article.node.excerpt.toLowerCase().includes(search)
-          } else if (article.node.author.toLowerCase().includes(search)) {
-            return article.node.author.toLowerCase().includes(search)
-          } else if (article.node.content.toLowerCase().includes(search)) {
-            return article.node.content.toLowerCase().includes(search)
-          } else if (article.node.category.title.toLowerCase().includes(search)) {
-            return article.node.category.title.toLowerCase().includes(search)
-          } else if (this.getTagsLowercaseArray(article.node.tags).find(element => element.includes(search))) {
-            return this.getTagsLowercaseArray(article.node.tags).find(element => element.includes(search))
-          } else if (this.$luxon(article.node.date).toLowerCase().includes(search)) {
-            return (this.$luxon(article.node.date)).toLowerCase().includes(search)
+          if (
+            this.tagFilter == "All Tags" ||
+            article.node.tags.find(element => element.title.toLowerCase().includes(this.tagFilter.toLowerCase()))
+          ) {
+            if (article.node.title.toLowerCase().includes(search)) {
+              return article.node.title.toLowerCase().includes(search)
+            } else if (article.node.excerpt.toLowerCase().includes(search)) {
+              return article.node.excerpt.toLowerCase().includes(search)
+            } else if (article.node.author.toLowerCase().includes(search)) {
+              return article.node.author.toLowerCase().includes(search)
+            } else if (article.node.content.toLowerCase().includes(search)) {
+              return article.node.content.toLowerCase().includes(search)
+            } else if (article.node.category.title.toLowerCase().includes(search)) {
+              return article.node.category.title.toLowerCase().includes(search)
+            } else if (this.getTagsLowercaseArray(article.node.tags).find(element => element.includes(search))) {
+              return this.getTagsLowercaseArray(article.node.tags).find(element => element.includes(search))
+            } else if (this.$luxon(article.node.date).toLowerCase().includes(search)) {
+              return (this.$luxon(article.node.date)).toLowerCase().includes(search)
+            }
           }
       })
     },
