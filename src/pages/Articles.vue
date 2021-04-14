@@ -13,8 +13,7 @@
       <v-select :options="getTagsArray($page.tags.edges)" v-model="tagFilter" class="mt-2"></v-select>
     </div>
 
-    <!-- <button type="button" v-on:click="resetData" class="text-left px-4 py-2 text-sm font-semibold w-full md:w-auto rounded-sm hover:bg-gray-300 focus:bg-gray-200 bg-gray-200 block md:inline mt-4 md:mt-0">Refresh</button> -->
-    <b-button variant="primary" class="mt-2" v-on:click="resetData">Clear</b-button>
+    <b-button variant="primary" class="mt-2" @click="resetData">Clear</b-button>
 
     <div class="mt-2">
       <g-link to="/articles/categories">Search by Category</g-link> -
@@ -160,7 +159,6 @@ export default {
     },
     resetData () {
       Object.assign(this.$data, this.$options.data.apply(this))
-      this.fetchData()
       this.mounted = true
     }
   },
@@ -169,20 +167,41 @@ export default {
       return this.$page.posts.edges.filter(post => {
           let search = this.search.toLowerCase().trim()
 
-          if (post.node.title.toLowerCase().includes(search)) {
-            return post.node.title.toLowerCase().includes(search)
-          } else if (post.node.excerpt.toLowerCase().includes(search)) {
-            return post.node.excerpt.toLowerCase().includes(search)
-          } else if (post.node.author.toLowerCase().includes(search)) {
-            return post.node.author.toLowerCase().includes(search)
-          } else if (post.node.content.toLowerCase().includes(search)) {
-            return post.node.content.toLowerCase().includes(search)
-          } else if (post.node.category.title.toLowerCase().includes(search)) {
-            return post.node.category.title.toLowerCase().includes(search)
-          } else if (this.getTagsLowercaseArray(post.node.tags).find(element => element.includes(search))) {
-            return this.getTagsLowercaseArray(post.node.tags).find(element => element.includes(search))
-          } else if (this.$luxon(post.node.date).toLowerCase().includes(search)) {
-            return (this.$luxon(post.node.date)).toLowerCase().includes(search)
+          let categoryMatch = false
+          let tagMatch = false
+
+          if (
+            this.categoryFilter == "" ||
+            this.categoryFilter == "All Categories" ||
+            post.node.category.title.toLowerCase().includes(this.categoryFilter.toLowerCase())
+          ) {
+            categoryMatch = true
+          }
+
+          if (
+            this.tagFilter == "" ||
+            this.tagFilter == "All Tags" ||
+            this.getTagsLowercaseArray(post.node.tags).find(element => element.includes(this.tagFilter.toLowerCase()))
+          ) {
+            tagMatch = true
+          }
+
+          if (categoryMatch && tagMatch) {
+            if (post.node.title.toLowerCase().includes(search)) {
+              return post.node.title.toLowerCase().includes(search)
+            } else if (post.node.excerpt.toLowerCase().includes(search)) {
+              return post.node.excerpt.toLowerCase().includes(search)
+            } else if (post.node.author.toLowerCase().includes(search)) {
+              return post.node.author.toLowerCase().includes(search)
+            } else if (post.node.content.toLowerCase().includes(search)) {
+              return post.node.content.toLowerCase().includes(search)
+            } else if (post.node.category.title.toLowerCase().includes(search)) {
+              return post.node.category.title.toLowerCase().includes(search)
+            } else if (this.getTagsLowercaseArray(post.node.tags).find(element => element.includes(search))) {
+              return this.getTagsLowercaseArray(post.node.tags).find(element => element.includes(search))
+            } else if (this.$luxon(post.node.date).toLowerCase().includes(search)) {
+              return (this.$luxon(post.node.date)).toLowerCase().includes(search)
+            }
           }
       })
     },
