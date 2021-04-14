@@ -175,7 +175,7 @@ export default {
           let tagMatch = false
 
           if (
-            this.categoryFilter == "" ||
+            // this.categoryFilter == "" ||
             this.categoryFilter == "All Categories" ||
             post.node.category.title.toLowerCase().includes(this.categoryFilter.toLowerCase())
           ) {

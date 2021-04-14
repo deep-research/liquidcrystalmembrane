@@ -3,19 +3,16 @@
     <p><a href="/articles">Articles</a> / <a href="/articles/tags">Tags</a> / {{$page.tag.title}}</p>
     <h2 class="my-4">Tag: {{$page.tag.title}}</h2>
 
-    <b-input-group size="md" style="max-width: 400px">
-      <b-input-group-prepend is-text>
-        <b-icon icon="search"></b-icon>
-      </b-input-group-prepend>
-      <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
-    </b-input-group>
-
-    <!-- <div class="mt-2">
-      <g-link to="/articles/categories">Search by Category</g-link> -
-      <g-link to="/articles/tags">Search by Tag</g-link>
-    </div> -->
-
-    <button v-for="(category, index) in categoriesFound()" :key="index" @click="updateSearch(category)">{{category}}</button>
+    <div style="max-width: 400px">
+      <b-input-group size="md">
+        <b-input-group-prepend is-text>
+          <b-icon icon="search"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
+      </b-input-group>
+      <v-select :options="categoriesFound()" v-model="categoryFilter" :clearable="false" class="mt-2"></v-select>
+    </div>
+    <b-button @click="resetData" class="mt-2">Clear</b-button>
 
     <div v-if="searchResults.length > 0">
       <div v-if="searchResults.length == 1">
@@ -115,7 +112,8 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 2
+      perPage: 2,
+      categoryFilter: "All Categories"
     }
   },
   methods: {
@@ -128,17 +126,19 @@ export default {
       return(tags)
     },
     categoriesFound() {
-      let categories = []
+      let array = []
       this.$page.tag.belongsTo.edges.forEach(item => {
-        categories.push(item.node.category.title)
+        array.push(item.node.category.title)
       })
-      for (let i in categories) {
-        categories = [...new Set(categories)]
+      for (let i in array) {
+        array = [...new Set(array)]
       }
-      return categories.sort()
+      array.unshift("All Categories")
+      return array.sort()
     },
-    updateSearch(item) {
-      this.search = item
+    resetData () {
+      Object.assign(this.$data, this.$options.data.apply(this))
+      this.mounted = true
     }
   },
   computed: {
@@ -146,20 +146,25 @@ export default {
       return this.$page.tag.belongsTo.edges.filter(article => {
           let search = this.search.toLowerCase().trim()
 
-          if (article.node.title.toLowerCase().includes(search)) {
-            return article.node.title.toLowerCase().includes(search)
-          } else if (article.node.excerpt.toLowerCase().includes(search)) {
-            return article.node.excerpt.toLowerCase().includes(search)
-          } else if (article.node.author.toLowerCase().includes(search)) {
-            return article.node.author.toLowerCase().includes(search)
-          } else if (article.node.content.toLowerCase().includes(search)) {
-            return article.node.content.toLowerCase().includes(search)
-          } else if (article.node.category.title.toLowerCase().includes(search)) {
-            return article.node.category.title.toLowerCase().includes(search)
-          } else if (this.getTagsLowercaseArray(article.node.tags).find(element => element.includes(search))) {
-            return this.getTagsLowercaseArray(article.node.tags).find(element => element.includes(search))
-          } else if (this.$luxon(article.node.date).toLowerCase().includes(search)) {
-            return (this.$luxon(article.node.date)).toLowerCase().includes(search)
+          if (
+            this.categoryFilter == "All Categories" ||
+            article.node.category.title.toLowerCase().includes(this.categoryFilter.toLowerCase())
+          ) {
+            if (article.node.title.toLowerCase().includes(search)) {
+              return article.node.title.toLowerCase().includes(search)
+            } else if (article.node.excerpt.toLowerCase().includes(search)) {
+              return article.node.excerpt.toLowerCase().includes(search)
+            } else if (article.node.author.toLowerCase().includes(search)) {
+              return article.node.author.toLowerCase().includes(search)
+            } else if (article.node.content.toLowerCase().includes(search)) {
+              return article.node.content.toLowerCase().includes(search)
+            } else if (article.node.category.title.toLowerCase().includes(search)) {
+              return article.node.category.title.toLowerCase().includes(search)
+            } else if (this.getTagsLowercaseArray(article.node.tags).find(element => element.includes(search))) {
+              return this.getTagsLowercaseArray(article.node.tags).find(element => element.includes(search))
+            } else if (this.$luxon(article.node.date).toLowerCase().includes(search)) {
+              return (this.$luxon(article.node.date)).toLowerCase().includes(search)
+            }
           }
       })
     },
