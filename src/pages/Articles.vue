@@ -14,7 +14,7 @@
     </div>
 
     <!-- <button type="button" v-on:click="resetData" class="text-left px-4 py-2 text-sm font-semibold w-full md:w-auto rounded-sm hover:bg-gray-300 focus:bg-gray-200 bg-gray-200 block md:inline mt-4 md:mt-0">Refresh</button> -->
-    <b-button variant="primary" class="mt-2">Clear</b-button>
+    <b-button variant="primary" class="mt-2" v-on:click="resetData">Clear</b-button>
 
     <div class="mt-2">
       <g-link to="/articles/categories">Search by Category</g-link> -
@@ -157,6 +157,11 @@ export default {
       })
       array.unshift("All Tags")
       return(array)
+    },
+    resetData () {
+      Object.assign(this.$data, this.$options.data.apply(this))
+      this.fetchData()
+      this.mounted = true
     }
   },
   computed: {
