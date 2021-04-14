@@ -15,19 +15,21 @@
 
 
     <div class="mt-2">
-    <b-button variant="primary" @click="resetData">Clear</b-button>
-      <span class="ml-2">
+      <b-button @click="resetData">Clear</b-button>
+      <b-button variant="primary" @click="resetData" g-link to="/articles/categories" class="ml-2">Search by Category</b-button>
+      <b-button  variant="primary" @click="resetData" g-link to="/articles/tags" class="ml-2">Search by Tag</b-button>
+      <!-- <span class="ml-2">
         <g-link to="/articles/categories">Search by Category</g-link> -
         <g-link to="/articles/tags">Search by Tag</g-link>
-      </span>
+      </span> -->
     </div>
 
     <div v-if="searchResults.length > 0">
       <div v-if="searchResults.length == 1">
-        <p class="mt-2 mb-0">1 article found.</p>
+        <p class="mt-4 mb-0">1 article found.</p>
       </div>
       <div v-else>
-        <p class="mt-2 mb-0">{{searchResults.length}} articles found.</p>
+        <p class="mt-4 mb-0">{{searchResults.length}} articles found.</p>
       </div>
       <article v-for="item in lists" :key="item.node.id">
         <div class="media my-5">
