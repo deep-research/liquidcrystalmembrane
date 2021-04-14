@@ -9,8 +9,8 @@
         </b-input-group-prepend>
         <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
       </b-input-group>
-      <v-select :options="getTaxonomyArray($page.categories.edges)" class="mt-2"></v-select>
-      <v-select :options="getTaxonomyArray($page.tags.edges)" class="mt-2"></v-select>
+      <v-select :options="getCategoriesArray($page.categories.edges)" v-model="categoryFilter" class="mt-2"></v-select>
+      <v-select :options="getTagsArray($page.tags.edges)" v-model="tagFilter" class="mt-2"></v-select>
     </div>
 
     <!-- <button type="button" v-on:click="resetData" class="text-left px-4 py-2 text-sm font-semibold w-full md:w-auto rounded-sm hover:bg-gray-300 focus:bg-gray-200 bg-gray-200 block md:inline mt-4 md:mt-0">Refresh</button> -->
@@ -129,7 +129,9 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 3
+      perPage: 3,
+      categoryFilter: "All Categories",
+      tagFilter: "All Tags"
     }
   },
   methods: {
@@ -140,11 +142,20 @@ export default {
       })
       return(tags)
     },
-    getTaxonomyArray(data) {
+    getCategoriesArray(data) {
       let array = []
       data.forEach(element => {
         array.push(element.node.title)
       })
+      array.unshift("All Categories")
+      return(array)
+    },
+    getTagsArray(data) {
+      let array = []
+      data.forEach(element => {
+        array.push(element.node.title)
+      })
+      array.unshift("All Tags")
       return(array)
     }
   },
