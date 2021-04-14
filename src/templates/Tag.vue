@@ -15,6 +15,8 @@
       <g-link to="/articles/tags">Search by Tag</g-link>
     </div> -->
 
+    <button v-for="(category, index) in categoriesFound()" :key="index" @click="updateSearch(category)">{{category}}</button>
+
     <div v-if="searchResults.length > 0">
       <div v-if="searchResults.length == 1">
         <p class="mt-4 mb-0">1 article found.</p>
@@ -124,6 +126,19 @@ export default {
       })
         
       return(tags)
+    },
+    categoriesFound() {
+      let categories = []
+      this.$page.tag.belongsTo.edges.forEach(item => {
+        categories.push(item.node.category.title)
+      })
+      for (let i in categories) {
+        categories = [...new Set(categories)]
+      }
+      return categories.sort()
+    },
+    updateSearch(item) {
+      this.search = item
     }
   },
   computed: {
