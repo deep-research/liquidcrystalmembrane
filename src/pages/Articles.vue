@@ -14,10 +14,10 @@
     </div>
 
 
-    <div class="mt-2">
-      <b-button @click="resetData">Clear</b-button>
-      <b-button variant="primary" g-link to="/articles/categories" class="ml-2">Search by Category</b-button>
-      <b-button  variant="primary" g-link to="/articles/tags" class="ml-2">Search by Tag</b-button>
+    <div>
+      <b-button @click="resetData" class="mr-2 mt-2">Clear</b-button>
+      <b-button variant="primary" g-link to="/articles/categories" class="mr-2 mt-2">Search by Category</b-button>
+      <b-button  variant="primary" g-link to="/articles/tags" class="mt-2">Search by Tag</b-button>
       <!-- <span class="ml-2">
         <g-link to="/articles/categories">Search by Category</g-link> -
         <g-link to="/articles/tags">Search by Tag</g-link>
