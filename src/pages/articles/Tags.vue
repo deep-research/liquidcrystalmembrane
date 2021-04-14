@@ -1,10 +1,19 @@
 <template>
   <Layout>
     <p><a href="/articles">Articles</a> / Tags</p>
-    <h2>Tags</h2>
+    <h2 class="mb-4">Tags</h2>
 
+    <div style="max-width: 400px">
+      <b-input-group size="md">
+        <b-input-group-prepend is-text>
+          <b-icon icon="search"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
+      </b-input-group>
+    </div>
     <div class="mt-2">
-      <g-link to="/articles/categories">Search by Category</g-link>
+      <b-button @click="resetData">Clear</b-button>
+      <b-button variant="primary" @click="resetData" g-link to="/articles/categories" class="ml-2">Search by Category</b-button>
     </div>
 
     <b-form-radio-group
@@ -17,35 +26,41 @@
       stacked
     ></b-form-radio-group>
 
-    <div v-if="$page.tags.edges.length == 1">
-      <p class="mt-4 mb-0">1 tag found.</p>
-    </div>
-    <div v-else>
-      <p class="mt-4 mb-0">{{$page.tags.edges.length}} tags found.</p>
-    </div>
-
-    <div
-      v-for="item in lists"
-      :key="item.node.id"
-    >
-
-    <div class="media mt-5">
-      <div class="media-body">
-        <g-link :to="item.node.path">
-          <h4 class="my-0">{{item.node.title}} ({{item.node.belongsTo.totalCount}})</h4>
-        </g-link>
+    <div v-if="searchResults.length > 0">
+      <div v-if="searchResults.length == 1">
+        <p class="mt-4 mb-0">1 tag found.</p>
       </div>
+      <div v-else>
+        <p class="mt-4 mb-0">{{$page.tags.edges.length}} tags found.</p>
+      </div>
+
+      <div
+        v-for="item in lists"
+        :key="item.node.id"
+      >
+
+      <div class="media mt-5">
+        <div class="media-body">
+          <g-link :to="item.node.path">
+            <h4 class="my-0">{{item.node.title}} ({{item.node.belongsTo.totalCount}})</h4>
+          </g-link>
+        </div>
+      </div>
+
+      </div>
+
+      <b-pagination
+        v-if="searchResults.length > perPage"
+        :total-rows="totalRows" 
+        v-model="currentPage"
+        :per-page="perPage"
+        class="mb-0 mt-5"
+      />
     </div>
 
+    <div class="my-4" v-else>
+        <p>Your search didn't return any results. Please try again.</p>
     </div>
-
-    <b-pagination
-      v-if="$page.tags.edges.length > perPage"
-      :total-rows="totalRows" 
-      v-model="currentPage"
-      :per-page="perPage"
-      class="mb-0 mt-5"
-    />
   </Layout>
 </template>
 
@@ -87,6 +102,7 @@ export default {
   },
   data() {
     return {
+      search: '',
       currentPage: 1,
       perPage: 4,
       selected: 'A',
@@ -96,9 +112,25 @@ export default {
       ]
     }
   },
+  methods: {
+    resetData () {
+      Object.assign(this.$data, this.$options.data.apply(this))
+      this.mounted = true
+    }
+  },
   computed: {
+    searchResults() {
+      return this.$page.tags.edges.filter(post => {
+        let search = this.search.toLowerCase().trim()
+
+
+        if (post.node.title.toLowerCase().includes(search)) {
+          return post.node.title.toLowerCase().includes(search)
+        }
+      })
+    },
     lists() {
-      const items = this.$page.tags.edges
+      const items = this.searchResults
 
       // < ? 1 : -1 > to reverse
       if (this.selected == "A") {
@@ -113,7 +145,7 @@ export default {
       )
     },
     totalRows() {
-      return this.$page.tags.edges.length
+      return this.searchResults.length
     }
   }
 }
