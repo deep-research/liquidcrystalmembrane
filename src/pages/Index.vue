@@ -17,7 +17,7 @@
         </b-card-text>
       </b-card>
     </div>
-    <p style="text-align:center; font-size: 13.25px">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</p>
+    <p style="text-align:center; font-size: .86rem">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</p>
   </Layout>
 </template>
 
