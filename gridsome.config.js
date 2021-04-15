@@ -42,6 +42,14 @@ module.exports = {
             create: true
             // route: '/tags/:title'
           }
+        },
+        plugins: [
+          "remark-toc"
+        ],
+        remark: {
+          config: {
+            footnotes: true
+          }
         }
       }
     },
