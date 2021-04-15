@@ -10,6 +10,8 @@ import VuePaginate from 'vue-paginate'
 import vSelect from "vue-select"
 // import "vue-select/dist/vue-select.css"
 
+import VueDisqus from 'vue-disqus'
+
 import checkIfMobile from './mixins/checkIfMobile'
 
 export default function (Vue, { router, head, isClient }) {
@@ -25,7 +27,9 @@ export default function (Vue, { router, head, isClient }) {
     output: "date_short"
   });
 
-  Vue.component("v-select", vSelect);
+  Vue.component("v-select", vSelect)
+
+  Vue.use(VueDisqus)
 
   Vue.component('Layout', DefaultLayout)
   Vue.mixin(checkIfMobile)

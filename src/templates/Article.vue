@@ -28,6 +28,8 @@
       <!-- <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div> -->
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
       <VueRemarkContent class="mt-5" />
+
+      <Disqus shortname="liquid-crystal-membrane" :identifier="$page.post.title" class="mt-5" />
     </div>
   </Layout>
 </template>
