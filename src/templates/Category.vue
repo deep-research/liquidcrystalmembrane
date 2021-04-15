@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <p><a href="/articles">Articles</a> / <a href="/articles/categories">Categories</a> / {{$page.category.title}}</p>
+    <p><g-link to="/articles">Articles</g-link> / <g-link to="/articles/categories">Categories</g-link> / {{$page.category.title}}</p>
     <h2 class="my-4">Category: {{$page.category.title}}</h2>
 
     <div style="max-width: 400px">

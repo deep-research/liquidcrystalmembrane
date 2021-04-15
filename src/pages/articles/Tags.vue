@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <p><a href="/articles">Articles</a> / Tags</p>
+    <p><g-link to="/articles">Articles</g-link> / Tags</p>
     <h2 class="mb-4">Tags</h2>
 
     <div style="max-width: 400px">

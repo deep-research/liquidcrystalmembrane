@@ -4,7 +4,7 @@
     <div class="blogPost">
       
       <!-- Breadcrumbs -->
-      <p><a href="/articles">Articles</a> / 
+      <p><g-link to="/articles">Articles</g-link> / 
         {{$page.post.path.slice(10, -1).split("-").join(" ").replace(/\w\S*/g,
         function(txt) {return txt.charAt(0).toUpperCase() +
         txt.substr(1).toLowerCase()}).split(" ").join("-")}}</p>
