@@ -1,7 +1,14 @@
+require('dotenv').config()
+
 module.exports = {
   siteName: 'Liquid Crystal Membrane',
   siteDescription: 'Scientific research on liquid crystal membranes and other related topics.',
   siteUrl: 'https://liquidcrystalmembrane.com',
+  chainWebpack: config => {
+    config
+      .plugin('env')
+      .use(require.resolve('webpack/lib/EnvironmentPlugin'), ['API_KEY'])
+  },
   plugins: [
     // {
     //   use: '@gridsome/source-filesystem',
