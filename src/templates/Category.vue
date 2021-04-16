@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <p><g-link to="/articles">Articles</g-link> / <g-link to="/articles/categories">Categories</g-link> / {{$page.category.title}}</p>
+    <!-- <p><g-link to="/articles">Articles</g-link> / <g-link to="/articles/categories">Categories</g-link> / {{$page.category.title}}</p> -->
+    <b-breadcrumb :items="breadcrumbs()"></b-breadcrumb>
+
     <h2 class="my-4">Category: {{$page.category.title}}</h2>
 
     <div style="max-width: 400px">
@@ -141,6 +143,23 @@ export default {
       array.unshift("All Tags")
       return array.sort()
     },
+    breadcrumbs() {
+      let array = [
+        {
+          text: 'Articles',
+          to: '/articles'
+        },
+        {
+          text: 'Categories',
+          to: '/articles/categories'
+        },
+        {
+          text: this.$page.category.title,
+          active: true
+        }
+      ]
+      return array
+    }
   },
   computed: {
     searchResults() {

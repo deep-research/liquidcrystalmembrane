@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <p><g-link to="/articles">Articles</g-link> / Tags</p>
+    <!-- <p><g-link to="/articles">Articles</g-link> / Tags</p> -->
+    <b-breadcrumb :items="breadcrumbs"></b-breadcrumb>
+
     <h2 class="mb-4">Tags</h2>
 
     <div style="max-width: 400px">
@@ -110,6 +112,16 @@ export default {
       options: [
         { item: 'A', name: 'Sort By Count' },
         { item: 'B', name: 'Sort Alphabetically' },
+      ],
+      breadcrumbs: [
+        {
+          text: 'Articles',
+          to: '/articles'
+        },
+        {
+          text: 'Tags',
+          active: true
+        }
       ]
     }
   },

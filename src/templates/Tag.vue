@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <p><g-link href="/articles">Articles</g-link> / <g-link to="/articles/tags">Tags</g-link> / {{$page.tag.title}}</p>
+    <!-- <p><g-link to="/articles">Articles</g-link> / <g-link to="/articles/tags">Tags</g-link> / {{$page.tag.title}}</p> -->
+    <b-breadcrumb :items="breadcrumbs()"></b-breadcrumb>
+
     <h2 class="my-4">Tag: {{$page.tag.title}}</h2>
 
     <div style="max-width: 400px">
@@ -139,6 +141,23 @@ export default {
     resetData () {
       Object.assign(this.$data, this.$options.data.apply(this))
       this.mounted = true
+    },
+    breadcrumbs() {
+      let array = [
+        {
+          text: 'Articles',
+          to: '/articles'
+        },
+        {
+          text: 'Tags',
+          to: '/articles/tags'
+        },
+        {
+          text: this.$page.tag.title,
+          active: true
+        }
+      ]
+      return array
     }
   },
   computed: {

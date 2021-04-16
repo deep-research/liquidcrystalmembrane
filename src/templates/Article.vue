@@ -4,10 +4,8 @@
     <div class="blogPost">
       
       <!-- Breadcrumbs -->
-      <p><g-link to="/articles">Articles</g-link> / 
-        {{$page.post.path.slice(10, -1).split("-").join(" ").replace(/\w\S*/g,
-        function(txt) {return txt.charAt(0).toUpperCase() +
-        txt.substr(1).toLowerCase()}).split(" ").join("-")}}</p>
+      <!-- <p><g-link to="/articles">Articles</g-link> / {{slug()}}</p> -->
+      <b-breadcrumb :items="breadcrumbs()"></b-breadcrumb>
 
       <h2 v-html="$page.post.title" />
       <p class="mb-0" style="font-size: 20px">By {{$page.post.author}} - {{$page.post.date | luxon}}</p>
@@ -69,17 +67,39 @@ export default {
     return {
       title: this.$page.post.title,
     }
-  }
-  // methods: {
-  //   getTags () {
-  //     let tags = []
-  //     this.$page.post.tags.forEach(tag => {
-  //       tags.push(tag.title)
-  //     })
+  },
+
+  methods: {
+    slug() {
+      let slug = this.$page.post.path.slice(10, -1).split("-").join(" ").replace(/\w\S*/g,
+        function (txt) {
+          return txt.charAt(0).toUpperCase() +
+          txt.substr(1).toLowerCase()
+        }).split(" ").join("-")
+      return slug
+    },
+    breadcrumbs() {
+      let array = [
+        {
+          text: 'Articles',
+          to: '/articles'
+        },
+        {
+          text: this.slug(),
+          active: true
+        }
+      ]
+      return array
+    }
+    // getTags () {
+    //   let tags = []
+    //   this.$page.post.tags.forEach(tag => {
+    //     tags.push(tag.title)
+    //   })
         
-  //     return(tags)
-  //   }
-  // }
+    //   return(tags)
+    // }
+  }
 }
 </script>
 

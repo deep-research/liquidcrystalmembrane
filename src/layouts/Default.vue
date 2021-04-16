@@ -71,4 +71,8 @@ p {
 ::-moz-selection {
   background: #a8d1ff; /* Gecko Browsers */
 }
+
+.breadcrumb {
+  display: inline-flex !important;
+}
 </style>
