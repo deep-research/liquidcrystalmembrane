@@ -34,7 +34,7 @@
         <p class="mt-4 mb-0">1 category found.</p>
       </div>
       <div v-else>
-        <p class="mt-4 mb-0">{{$page.categories.edges.length}} categories found.</p>
+        <p class="mt-4 mb-0">{{searchResults.length}} categories found.</p>
       </div>
 
       <div
