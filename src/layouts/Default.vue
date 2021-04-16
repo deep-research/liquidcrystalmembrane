@@ -74,5 +74,6 @@ p {
 
 .breadcrumb {
   display: inline-flex !important;
+  margin-bottom: 0  !important;
 }
 </style>
