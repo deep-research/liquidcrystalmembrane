@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <!-- <g-image immediate class="blogImage mb-4" :src="$page.post.image" /> -->
-    <div class="blogPost">
+    <article class="blogPost">
       
       <!-- Breadcrumbs -->
       <!-- <p><g-link to="/articles">Articles</g-link> / {{slug()}}</p> -->
@@ -28,7 +28,7 @@
       <VueRemarkContent class="mt-5" />
 
       <Disqus shortname="liquid-crystal-membrane" :identifier="$page.post.title" class="mt-5" />
-    </div>
+    </article>
   </Layout>
 </template>
 
