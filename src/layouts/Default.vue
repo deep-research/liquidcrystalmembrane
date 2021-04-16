@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <div id="content-wrapper">
-      <Header/>
+      <Header class="mb-4" />
       <slot/>
     </div>
     <Footer/>
