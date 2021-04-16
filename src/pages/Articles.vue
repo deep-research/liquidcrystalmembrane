@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h2 class="my-4">Articles</h2>
+    <h2 class="mb-5 mt-4">Articles</h2>
 
     <div style="max-width: 400px">
       <b-input-group size="md">

@@ -3,7 +3,7 @@
     <!-- <p><g-link to="/articles">Articles</g-link> / <g-link to="/articles/tags">Tags</g-link> / {{$page.tag.title}}</p> -->
     <b-breadcrumb :items="breadcrumbs()"></b-breadcrumb>
 
-    <h2 class="my-4">Tag: {{$page.tag.title}}</h2>
+    <h2 class="mb-5 mt-4">Tag: {{$page.tag.title}}</h2>
 
     <div style="max-width: 400px">
       <b-input-group size="md">

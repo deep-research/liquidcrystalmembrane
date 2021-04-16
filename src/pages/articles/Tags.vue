@@ -3,7 +3,7 @@
     <!-- <p><g-link to="/articles">Articles</g-link> / Tags</p> -->
     <b-breadcrumb :items="breadcrumbs"></b-breadcrumb>
 
-    <h2 class="my-4">Tags</h2>
+    <h2 class="mb-5 mt-4">Tags</h2>
 
     <div style="max-width: 400px">
       <b-input-group size="md">
