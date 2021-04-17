@@ -7,8 +7,11 @@
       <!-- <p><g-link to="/articles">Articles</g-link> / {{slug()}}</p> -->
       <b-breadcrumb :items="breadcrumbs()"></b-breadcrumb>
 
-      <h2 v-html="$page.post.title" class="mb-5 mt-4" />
-      <p class="mb-0" style="font-size: 20px">By {{$page.post.author}} - {{$page.post.date | luxon}}</p>
+      <h1 v-html="$page.post.title" class="mb-5 mt-4" />
+      <div class="mb-2">
+        <span style="font-size: 20px">By {{$page.post.author}} - {{$page.post.date | luxon}}</span>
+      </div>
+
       <p v-if="$page.post.category" class="mb-0 mt-1">
         <span style="font-weight: 500">
           <g-link to="/articles/categories" v-b-tooltip.hover title="Search By Category">Category</g-link>:
@@ -25,7 +28,7 @@
       </p>
       <!-- <div><b>Time:</b> {{ $page.post.timeToRead }} min read</div> -->
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
-      <VueRemarkContent class="mt-5" />
+      <VueRemarkContent class="article-text mt-5" />
 
       <Disqus shortname="liquid-crystal-membrane" :identifier="$page.post.title" class="mt-5" />
     </article>

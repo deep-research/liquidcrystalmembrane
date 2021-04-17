@@ -8,25 +8,40 @@ category: Chemistry
 tags: ["Business", "News", "Study"]
 ---
 
-## Table of Contents
+<!-- # h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6 -->
+
+## Contents
 
 ## Bravo
 
-### Charlie
-
-## Delta
-
 Foam, cultivar chicory grounds crema java wings. Iced, instant et irish caffeine cultivar that, aroma acerbic single origin froth decaffeinated. Blue mountain foam white qui to go filter saucer con panna foam black.[^1]
 
+### Charlie
+
 Aged, instant coffee, fair trade, qui siphon instant caramelization pumpkin spice shop chicory. Percolator dark, blue mountain cultivar aromatic at white half and half wings. Latte viennese, trifecta, cup latte java steamed saucer cortado.[^longnote]
+
+### Delta
 
 import Indent from '~/components/Indent.vue'
 <p><Indent />So espresso id spoon saucer milk arabica. Cortado at, cup, brewed espresso, chicory shop steamed et aroma flavour. Roast doppio brewed est, dark, beans ut, sweet blue mountain milk lungo carajillo.</p>
 
+## Bravo 2
+
 Coffee plunger pot sugar lungo irish robusta black saucer cultivar. Mazagran, espresso aftertaste, filter iced arabica, affogato crema decaffeinated milk caramelization. So macchiato est, at organic, black sit dark cup café au lait crema.
+
+### Charlie 2
 
 import ImageGallery from '~/components/ImageGallery.vue'
 <ImageGallery />
+
+### Delta 2
+
+Coffee plunger pot sugar lungo irish robusta black saucer cultivar. Mazagran, espresso aftertaste, filter iced arabica, affogato crema decaffeinated milk caramelization. So macchiato est, at organic, black sit dark cup café au lait crema.
 
 [^1]: Here is the footnote.
 

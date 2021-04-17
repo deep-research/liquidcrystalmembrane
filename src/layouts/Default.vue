@@ -15,8 +15,8 @@ import Header from '../components/Header'
 export default {
   components: {
     Footer,
-    Header,
-  },
+    Header
+  }
 }
 </script>
 
@@ -34,12 +34,36 @@ body {
   line-height: 1.5;
 }
 
-h2 {
+h1:not(.carousel-caption h1) {
   font-size: 28px !important;
 }
+h2:not(.carousel-caption h2) {
+  font-size: 26px !important;
+}
+h3:not(.carousel-caption h3) {
+  font-size: 24px !important;
+}
+h4:not(.carousel-caption h4) {
+  font-size: 22px !important;
+}
+h5:not(.carousel-caption h5) {
+  font-size: 19px !important;
+}
+h6:not(.carousel-caption h6) {
+  font-size: 17px !important;
+}
 
-p {
-  font-size: 17px;
+p, ol, ul, li {
+  font-size: 17px !important;
+}
+
+.article-text h2:not(#contents):not(.carousel-caption h2),
+.article-text h3:not(#contents):not(.carousel-caption h3),
+.article-text h4:not(#contents):not(.carousel-caption h4),
+.article-text h5:not(#contents):not(.carousel-caption h5),
+.article-text h6:not(#contents):not(.carousel-caption h6),
+.footnotes {
+  padding-top: 32px;
 }
 
 @media (hover: hover) and (pointer: fine) {

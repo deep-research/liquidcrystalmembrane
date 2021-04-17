@@ -3,7 +3,7 @@
     <!-- <p><g-link to="/articles">Articles</g-link> / <g-link to="/articles/tags">Tags</g-link> / {{$page.tag.title}}</p> -->
     <b-breadcrumb :items="breadcrumbs()"></b-breadcrumb>
 
-    <h2 class="mb-5 mt-4">Tag: {{$page.tag.title}}</h2>
+    <h1 class="mb-5 mt-4">Tag: {{$page.tag.title}}</h1>
 
     <div style="max-width: 400px">
       <b-input-group size="md">
@@ -28,9 +28,11 @@
           <!-- <g-image immediate :src="item.node.image" class="mr-3" alt="image" /> -->
           <div class="media-body">
             <g-link :to="item.node.path">
-              <h4 class="mt-0">{{item.node.title}}</h4>
+              <h3 class="mt-0">{{item.node.title}}</h3>
             </g-link>
-            <p  class="mb-2" style="font-size: 20px">By {{item.node.author}} - {{item.node.date | luxon}}</p>
+            <div class="mb-2">
+              <span style="font-size: 20px">By {{item.node.author}} - {{item.node.date | luxon}}</span>
+            </div>
             <p class="mb-0">{{item.node.excerpt}}</p>
             <p v-if="item.node.category" class="mb-0 mt-1">
               <span style="font-weight: 500">

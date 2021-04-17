@@ -44,7 +44,11 @@ module.exports = {
           }
         },
         plugins: [
-          "remark-toc"
+          [ "remark-toc", { 
+            heading: "contents" ,
+            tight: true,
+            ordered: true
+          }],
         ],
         remark: {
           config: {

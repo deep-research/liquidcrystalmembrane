@@ -3,7 +3,7 @@
     <!-- <p><g-link to="/articles">Articles</g-link> / Categories</p> -->
     <b-breadcrumb :items="breadcrumbs"></b-breadcrumb>
 
-    <h2 class="mb-5 mt-4">Categories</h2>
+    <h1 class="mb-5 mt-4">Categories</h1>
 
     <div style="max-width: 400px">
       <b-input-group size="md">
@@ -45,7 +45,7 @@
       <div class="media mt-5">
         <div class="media-body">
           <g-link :to="item.node.path">
-            <h4 class="my-0">{{item.node.title}} ({{item.node.belongsTo.totalCount}})</h4>
+            <h3 class="my-0">{{item.node.title}} ({{item.node.belongsTo.totalCount}})</h3>
           </g-link>
         </div>
       </div>

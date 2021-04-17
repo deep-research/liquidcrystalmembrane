@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h2 class="mb-5">Success!</h2>
+    <h1 class="mb-5">Success!</h1>
     <img style="max-width: 300px" class="mail-image" src="../assets/images/mail-sent.svg" />
     <h3 class="mt-5 text-center">Your mail was successfully sent!</h3>
   </Layout>

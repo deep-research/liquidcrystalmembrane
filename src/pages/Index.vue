@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div>
-      <h2 class="mb-5">Home</h2>
+      <h1 class="mb-5">Home</h1>
       <b-card
         overlay
         img-src="/liquidcrystal-homepage.jpg"
@@ -17,7 +17,11 @@
         </b-card-text>
       </b-card>
     </div>
-    <p style="text-align:center; font-size: 13.24px">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</p>
+    <div style="text-align:center; font-size: 13.24px">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</div>
+    
+    <div class=".article-text">
+
+    </div>
   </Layout>
 </template>
 
