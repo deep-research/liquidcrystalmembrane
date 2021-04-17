@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div>
-      <h1 class="mb-5">Home</h1>
+      <h1 class="mb-4">Home</h1>
       <b-card
         overlay
         img-src="/liquidcrystal-homepage.jpg"

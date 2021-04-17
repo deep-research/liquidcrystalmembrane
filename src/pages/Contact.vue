@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="mb-5">Contact</h1>
+    <h1 class="mb-4">Contact</h1>
     <div>
       <img class="contact-image mb-5" style="max-width: 200px" src="../../uploads/email.svg" />
       <div style="display: none">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

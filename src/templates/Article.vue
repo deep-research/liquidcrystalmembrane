@@ -7,9 +7,9 @@
       <!-- <p><g-link to="/articles">Articles</g-link> / {{slug()}}</p> -->
       <b-breadcrumb :items="breadcrumbs()"></b-breadcrumb>
 
-      <h1 v-html="$page.post.title" class="mb-5 mt-4" />
+      <h1 v-html="$page.post.title" class="my-4" />
       <div class="mb-2">
-        <span style="font-size: 20px">By {{$page.post.author}} - {{$page.post.date | luxon}}</span>
+        <span style="font-size: 20.5px">By {{$page.post.author}} - {{$page.post.date | luxon}}</span>
       </div>
 
       <p v-if="$page.post.category" class="mb-0 mt-1">

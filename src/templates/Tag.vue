@@ -3,7 +3,7 @@
     <!-- <p><g-link to="/articles">Articles</g-link> / <g-link to="/articles/tags">Tags</g-link> / {{$page.tag.title}}</p> -->
     <b-breadcrumb :items="breadcrumbs()"></b-breadcrumb>
 
-    <h1 class="mb-5 mt-4">Tag: {{$page.tag.title}}</h1>
+    <h1 class="my-4">Tag: {{$page.tag.title}}</h1>
 
     <div style="max-width: 400px">
       <b-input-group size="md">
@@ -31,7 +31,7 @@
               <h3 class="mt-0">{{item.node.title}}</h3>
             </g-link>
             <div class="mb-2">
-              <span style="font-size: 20px">By {{item.node.author}} - {{item.node.date | luxon}}</span>
+              <span style="font-size: 20.5px">By {{item.node.author}} - {{item.node.date | luxon}}</span>
             </div>
             <p class="mb-0">{{item.node.excerpt}}</p>
             <p v-if="item.node.category" class="mb-0 mt-1">

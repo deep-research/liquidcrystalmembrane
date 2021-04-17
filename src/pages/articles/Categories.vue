@@ -3,7 +3,7 @@
     <!-- <p><g-link to="/articles">Articles</g-link> / Categories</p> -->
     <b-breadcrumb :items="breadcrumbs"></b-breadcrumb>
 
-    <h1 class="mb-5 mt-4">Categories</h1>
+    <h1 class="my-4">Categories</h1>
 
     <div style="max-width: 400px">
       <b-input-group size="md">
