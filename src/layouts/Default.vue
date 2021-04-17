@@ -35,22 +35,25 @@ body {
 }
 
 h1:not(.carousel-caption h1) {
-  font-size: 28px !important;
+  font-size: 25px !important;
 }
 h2:not(.carousel-caption h2) {
-  font-size: 26px !important;
+  font-size: 25px !important;
 }
 h3:not(.carousel-caption h3) {
-  font-size: 24px !important;
+  font-size: 21px !important;
+  font-weight: 500 !important;
 }
 h4:not(.carousel-caption h4) {
-  font-size: 22px !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
 }
 h5:not(.carousel-caption h5) {
-  font-size: 19px !important;
+  font-size: 17px !important;
+  font-weight: normal !important;
 }
 h6:not(.carousel-caption h6) {
-  font-size: 17px !important;
+  display: none
 }
 
 p, ol, ul, li {
