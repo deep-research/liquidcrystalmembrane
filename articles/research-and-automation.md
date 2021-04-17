@@ -8,13 +8,33 @@ category: Chemistry
 tags: ["Business", "News", "Study"]
 ---
 
-Foam, cultivar chicory grounds crema java wings. Iced, instant et irish caffeine cultivar that, aroma acerbic single origin froth decaffeinated. Blue mountain foam white qui to go filter saucer con panna foam black.
+## Table of Contents
 
-Aged, instant coffee, fair trade, qui siphon instant caramelization pumpkin spice shop chicory. Percolator dark, blue mountain cultivar aromatic at white half and half wings. Latte viennese, trifecta, cup latte java steamed saucer cortado.
+## Bravo
 
-So espresso id spoon saucer milk arabica. Cortado at, cup, brewed espresso, chicory shop steamed et aroma flavour. Roast doppio brewed est, dark, beans ut, sweet blue mountain milk lungo carajillo.
+### Charlie
+
+## Delta
+
+Foam, cultivar chicory grounds crema java wings. Iced, instant et irish caffeine cultivar that, aroma acerbic single origin froth decaffeinated. Blue mountain foam white qui to go filter saucer con panna foam black.[^1]
+
+Aged, instant coffee, fair trade, qui siphon instant caramelization pumpkin spice shop chicory. Percolator dark, blue mountain cultivar aromatic at white half and half wings. Latte viennese, trifecta, cup latte java steamed saucer cortado.[^longnote]
+
+import Indent from '~/components/Indent.vue'
+<p><Indent />So espresso id spoon saucer milk arabica. Cortado at, cup, brewed espresso, chicory shop steamed et aroma flavour. Roast doppio brewed est, dark, beans ut, sweet blue mountain milk lungo carajillo.</p>
 
 Coffee plunger pot sugar lungo irish robusta black saucer cultivar. Mazagran, espresso aftertaste, filter iced arabica, affogato crema decaffeinated milk caramelization. So macchiato est, at organic, black sit dark cup café au lait crema.
 
 import ImageGallery from '~/components/ImageGallery.vue'
 <ImageGallery />
+
+[^1]: Here is the footnote.
+
+    Subsequent paragraphs are indented to show that they
+    belong to the previous footnote.
+
+    The whole paragraph can be indented, or just the first
+    line.  In this way, multi-paragraph footnotes work like
+    multi-paragraph list items.
+
+[^longnote]: Here is the 2nd footnote.
