@@ -19,22 +19,21 @@
     </div>
     <div style="text-align:center; font-size: 13.24px">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</div>
 
-    <!-- <iframe
-      :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-dodecyl-sulfate#section=3D-Conformer&fullscreen=true`"
-      width="100%"
-      height="500px"
-      frameborder="0" >
-    </iframe> -->
-    
-    <!-- <iframe
-      :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Leucocrystal-Violet#section=3D-Conformer&fullscreen=true`"
-      width="100%"
-      height="500px"
-      frameborder="0" >
-    </iframe> -->
-
     <div class=".article-text">
-
+      <iframe
+        :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-dodecyl-sulfate#section=3D-Conformer&fullscreen=true`"
+        width="100%"
+        height="762px"
+        frameborder="0"
+        class="mt-5">
+      </iframe>
+      
+      <iframe
+        :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Leucocrystal-Violet#section=3D-Conformer&fullscreen=true`"
+        width="100%"
+        height="694px"
+        frameborder="0" >
+      </iframe>
     </div>
   </Layout>
 </template>
@@ -47,7 +46,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @media screen and (min-width: 420px) {
   #subtitle {
     font-size: 35px;
