@@ -19,23 +19,41 @@
     </div>
     <div style="text-align:center; font-size: 13.24px">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</div>
 
+    <h2 class="mt-5 text-center">Sodium Lauryl Sulfate</h2>
+    <iframe
+      class="text-center mx-auto d-block"
+      style="width: 600px; height: 400px;"
+      frameborder="0" src="https://embed.molview.org/v1/?mode=balls&cid=3423265" >
+      <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <h2 class="mt-5 text-center">Leucocrystal Violet</h2>
+    <iframe
+      class="text-center mx-auto d-block"
+      style="width: 600px; height: 400px;"
+      frameborder="0"
+      src="https://embed.molview.org/v1/?mode=balls&cid=69048">
+      <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <!-- <iframe
+      :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-dodecyl-sulfate#section=3D-Conformer&fullscreen=true`"
+      width="100%"
+      height="762px"
+      frameborder="0"
+      class="mt-5">
+      <p>Your browser does not support iframes.</p>
+    </iframe> -->
+    
+    <!-- <iframe
+      :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Leucocrystal-Violet#section=3D-Conformer&fullscreen=true`"
+      width="100%"
+      height="694px"
+      frameborder="0" >
+      <p>Your browser does not support iframes.</p>
+    </iframe> -->
+
     <div class=".article-text">
-      <iframe
-        :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-dodecyl-sulfate#section=3D-Conformer&fullscreen=true`"
-        width="100%"
-        height="762px"
-        frameborder="0"
-        class="mt-5">
-        <p>Your browser does not support iframes.</p>
-      </iframe>
-      
-      <iframe
-        :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Leucocrystal-Violet#section=3D-Conformer&fullscreen=true`"
-        width="100%"
-        height="694px"
-        frameborder="0" >
-        <p>Your browser does not support iframes.</p>
-      </iframe>
     </div>
   </Layout>
 </template>
