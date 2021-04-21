@@ -21,24 +21,24 @@
 
     <h2 class="mt-5 text-center">Sodium Lauryl Sulfate</h2>
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe
+      <embed
         class="embed-responsive-item"
         src="https://embed.molview.org/v1/?mode=balls&cid=3423265"
         frameborder="0"
         allowfullscreen>
         <p>Your browser does not support iframes.</p>
-      </iframe>
+      >
     </div>
 
     <h2 class="mt-5 text-center">Leucocrystal Violet</h2>
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe
+      <embed
         class="embed-responsive-item"
         src="https://embed.molview.org/v1/?mode=balls&cid=69048"
         frameborder="0"
         allowfullscreen>
         <p>Your browser does not support iframes.</p>
-      </iframe>
+      >
     </div>
 
     <!-- <iframe
