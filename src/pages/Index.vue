@@ -20,21 +20,26 @@
     <div style="text-align:center; font-size: 13.24px">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</div>
 
     <h2 class="mt-5 text-center">Sodium Lauryl Sulfate</h2>
-    <iframe
-      class="text-center mx-auto d-block"
-      style="width: 600px; height: 400px;"
-      frameborder="0" src="https://embed.molview.org/v1/?mode=balls&cid=3423265" >
-      <p>Your browser does not support iframes.</p>
-    </iframe>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        class="embed-responsive-item"
+        src="https://embed.molview.org/v1/?mode=balls&cid=3423265"
+        frameborder="0"
+        allowfullscreen>
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
 
     <h2 class="mt-5 text-center">Leucocrystal Violet</h2>
-    <iframe
-      class="text-center mx-auto d-block"
-      style="width: 600px; height: 400px;"
-      frameborder="0"
-      src="https://embed.molview.org/v1/?mode=balls&cid=69048">
-      <p>Your browser does not support iframes.</p>
-    </iframe>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        class="embed-responsive-item"
+        src="https://embed.molview.org/v1/?mode=balls&cid=69048"
+        frameborder="0"
+        allowfullscreen>
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
 
     <!-- <iframe
       :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-dodecyl-sulfate#section=3D-Conformer&fullscreen=true`"
