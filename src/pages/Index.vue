@@ -26,6 +26,7 @@
         height="762px"
         frameborder="0"
         class="mt-5">
+        <p>Your browser does not support iframes.</p>
       </iframe>
       
       <iframe
@@ -33,6 +34,7 @@
         width="100%"
         height="694px"
         frameborder="0" >
+        <p>Your browser does not support iframes.</p>
       </iframe>
     </div>
   </Layout>
