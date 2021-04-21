@@ -25,6 +25,13 @@
       height="500px"
       frameborder="0" >
     </iframe> -->
+    
+    <!-- <iframe
+      :src="`https://pubchem.ncbi.nlm.nih.gov/compound/Leucocrystal-Violet#section=3D-Conformer&fullscreen=true`"
+      width="100%"
+      height="500px"
+      frameborder="0" >
+    </iframe> -->
 
     <div class=".article-text">
 
