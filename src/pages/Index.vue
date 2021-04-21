@@ -30,11 +30,11 @@
       >
     </div>
 
-    <h2 class="mt-5 text-center">Leucocrystal Violet</h2>
+    <h2 class="mt-5 text-center">Crystal Violet</h2>
     <div class="embed-responsive embed-responsive-16by9">
       <embed
         class="embed-responsive-item"
-        src="https://embed.molview.org/v1/?mode=balls&cid=69048"
+        src="https://embed.molview.org/v1/?mode=balls&cid=11057"
         frameborder="0"
         allowfullscreen>
         <p>Your browser does not support iframes.</p>
