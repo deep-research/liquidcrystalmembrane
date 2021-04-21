@@ -20,6 +20,7 @@
     <div style="text-align:center; font-size: 13.24px">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</div>
 
     <h2 class="mt-5 text-center">Sodium Lauryl Sulfate</h2>
+    <b-img class="mx-auto d-block my-3" fluid src="/sodium-lauryl-sulfate.png"></b-img>
     <div class="embed-responsive embed-responsive-16by9">
       <embed
         class="embed-responsive-item"
@@ -31,6 +32,7 @@
     </div>
 
     <h2 class="mt-5 text-center">Crystal Violet</h2>
+    <b-img class="mx-auto d-block my-3" fluid src="/crystal-violet-chloride.png"></b-img>
     <div class="embed-responsive embed-responsive-16by9">
       <embed
         class="embed-responsive-item"
