@@ -38,7 +38,7 @@
         <p>Your browser does not support iframes.</p>
     </div>
 
-    <h2 class="mt-5 text-center">Crystal Violet Chloride</h2>
+    <h2 class="mt-5 text-center">Crystal Violet</h2>
     <div class="text-center">
       <a href="https://molview.org/?cid=11057" target="_blank" class="d-inline-block my-3">
         <b-img class="d-inline-block molecule2d"
