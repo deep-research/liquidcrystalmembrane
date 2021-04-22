@@ -12,6 +12,11 @@ import vSelect from "vue-select"
 
 import VueDisqus from 'vue-disqus'
 
+import { addBackToTop } from 'vanilla-back-to-top'
+addBackToTop({
+  backgroundColor: '#224c98'
+})
+
 import checkIfMobile from './mixins/checkIfMobile'
 
 export default function (Vue, { router, head, isClient }) {
