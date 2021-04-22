@@ -20,14 +20,16 @@
     <div style="text-align:center; font-size: 13.24px">Image courtesy of Oleg Lavrentovich, Liquid Crystal Institute, Kent State University.</div>
 
     <h2 class="mt-5 text-center">Sodium Lauryl Sulfate</h2>
-    <a href="https://molview.org/?cid=3423265" target="_blank">
-      <b-img
-        class="mx-auto d-block my-3 molecule2d"
-        fluid
-        src="/sodium-lauryl-sulfate.png"
-        alt="Sodium Lauryl Sulfate Structure">
-      </b-img>
-    </a>
+    <div class="text-center">
+      <a href="https://molview.org/?cid=3423265" target="_blank" class="d-inline-block my-3">
+        <b-img
+          class="d-inline-block molecule2d"
+          fluid
+          src="/sodium-lauryl-sulfate.png"
+          alt="Sodium Lauryl Sulfate Structure" >
+        </b-img>
+      </a>
+    </div>
     <div class="embed-responsive embed-responsive-16by9">
       <embed
         class="embed-responsive-item"
@@ -39,12 +41,14 @@
     </div>
 
     <h2 class="mt-5 text-center">Crystal Violet Chloride</h2>
-    <a href="https://molview.org/?cid=11057" target="_blank">
-      <b-img class="mx-auto d-block my-3 molecule2d"
-        fluid src="/crystal-violet-chloride.png"
-        alt="Crystal Violet Chloride Structure">
-      </b-img>
-    </a>
+    <div class="text-center">
+      <a href="https://molview.org/?cid=11057" target="_blank" class="d-inline-block my-3">
+        <b-img class="d-inline-block molecule2d"
+          fluid src="/crystal-violet-chloride.png"
+          alt="Crystal Violet Chloride Structure" >
+        </b-img>
+      </a>
+    </div>
     <div class="embed-responsive embed-responsive-16by9">
       <embed
         class="embed-responsive-item"
