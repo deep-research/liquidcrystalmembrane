@@ -12,10 +12,17 @@
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
+import { addBackToTop } from 'vanilla-back-to-top'
+
 export default {
   components: {
     Footer,
     Header
+  },
+  mounted() {
+    addBackToTop({
+      backgroundColor: '#224c98'
+    })
   }
 }
 </script>
