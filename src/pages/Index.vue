@@ -10,8 +10,7 @@
         sub-title=""
         style="max-width: 500px"
         class="mx-auto"
-        id="title-card"
-      >
+        id="title-card" >
         <b-card-text>
           <span class="text-center" id="subtitle">Scientific research on liquid crystal membranes and other related topics.</span>
         </b-card-text>
@@ -35,9 +34,8 @@
         class="embed-responsive-item"
         src="https://embed.molview.org/v1/?mode=balls&cid=3423265"
         frameborder="0"
-        allowfullscreen>
+        allowfullscreen >
         <p>Your browser does not support iframes.</p>
-      >
     </div>
 
     <h2 class="mt-5 text-center">Crystal Violet Chloride</h2>
@@ -54,9 +52,8 @@
         class="embed-responsive-item"
         src="https://embed.molview.org/v1/?mode=balls&cid=11057"
         frameborder="0"
-        allowfullscreen>
+        allowfullscreen >
         <p>Your browser does not support iframes.</p>
-      >
     </div>
 
     <!-- <iframe
