@@ -30,7 +30,7 @@ export default {
       onClickScrollTo: 0, // px
       scrollContainer: document.body, // or a DOM element, e.g., document.getElementById('content')
       scrollDuration: 100, // ms
-      showWhenScrollTopIs:  1, // px
+      showWhenScrollTopIs:  2500, // px
       // size: diameter, // alias for diameter
       textColor: '#fff',
       zIndex: 1
