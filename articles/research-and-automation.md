@@ -8,13 +8,6 @@ category: Chemistry
 tags: ["Business", "News", "Study"]
 ---
 
-<!-- # h1
-## h2
-### h3
-#### h4
-##### h5
-###### h6 -->
-
 ## Contents
 
 ## Bravo
@@ -48,6 +41,10 @@ import ImageGallery from '~/components/ImageGallery.vue'
 ### Delta 2
 
 Coffee plunger pot sugar lungo irish robusta black saucer cultivar. Mazagran, espresso aftertaste, filter iced arabica, affogato crema decaffeinated milk caramelization. So macchiato est, at organic, black sit dark cup café au lait crema.
+
+## Related Articles
+
+* [Liquid Crystal Membranes as a Biosensor](/articles/biosensor)
 
 [^1]: Here is the footnote.
 
