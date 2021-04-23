@@ -16,9 +16,12 @@
       <!-- Text slides with image -->
       <b-carousel-slide
         caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/1024/480/?image=52"
-      ></b-carousel-slide>
+        img-src="https://picsum.photos/1024/480/?image=52" >
+        <!-- text="Nulla vitae elit libero, a pharetra augue mollis interdum." -->
+        <!-- <p>
+          Nulla vitae elit libero, a pharetra augue mollis interdum.
+        </p> -->
+      </b-carousel-slide>
 
       <!-- Slides with custom text -->
       <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
@@ -44,10 +47,10 @@
 
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
       <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
+        <!-- <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
           a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
+        </p> -->
       </b-carousel-slide>
     </b-carousel>
 
