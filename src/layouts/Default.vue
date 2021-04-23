@@ -60,16 +60,11 @@ p, ol, ul, li {
   font-size: 17px !important;
 }
 
-// .article-text h2:not(#contents):not(.carousel-caption h2),
-// .article-text h3:not(#contents):not(.carousel-caption h3),
-// .article-text h4:not(#contents):not(.carousel-caption h4),
-// .article-text h5:not(#contents):not(.carousel-caption h5),
-// .article-text h6:not(#contents):not(.carousel-caption h6),
-.article-text h2:not(#contents),
-.article-text h3:not(#contents),
-.article-text h4:not(#contents),
-.article-text h5:not(#contents),
-.article-text h6:not(#contents),
+.article-text h2:not(#contents):not(.carousel-caption h2),
+.article-text h3:not(#contents):not(.carousel-caption h3),
+.article-text h4:not(#contents):not(.carousel-caption h4),
+.article-text h5:not(#contents):not(.carousel-caption h5),
+.article-text h6:not(#contents):not(.carousel-caption h6),
 .footnotes {
   padding-top: 32px;
 }
