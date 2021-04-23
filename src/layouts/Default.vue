@@ -56,6 +56,28 @@ h6:not(.carousel-caption h6) {
   display: none
 }
 
+.carousel-caption h1 {
+  font-size: 25px !important;
+}
+.carousel-caption h2 {
+  font-size: 25px !important;
+}
+.carousel-caption h3 {
+  font-size: 21px !important;
+  font-weight: 500 !important;
+}
+.carousel-caption h4{
+  font-size: 17px !important;
+  font-weight: 500 !important;
+}
+.carousel-caption h5 {
+  font-size: 17px !important;
+  font-weight: normal !important;
+}
+.carousel-caption h6 {
+  display: none
+}
+
 p, ol, ul, li {
   font-size: 17px !important;
 }
