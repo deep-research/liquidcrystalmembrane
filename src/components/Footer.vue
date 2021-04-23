@@ -2,7 +2,7 @@
   <footer class="page-footer font-small teal py-4">
     <div style="max-width: 950px; width: 90vw; margin: 0 auto;" class="d-flex justify-content-between align-items-center"> 
       <div class="footer-copyright">© {{ new Date().getFullYear() }} Arkady Fisher</div>
-      <b-button @click="top()">Back To Top</b-button>
+      <b-button variant="outline-secondary" size="sm" @click="top()">Back To Top</b-button>
     </div>
   </footer>
 </template>
