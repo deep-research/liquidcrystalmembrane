@@ -74,6 +74,9 @@ h6:not(.carousel-caption h6) {
   font-size: 17px !important;
   font-weight: normal !important;
 }
+.carousel-caption p {
+  font-size: 17px !important;
+}
 .carousel-caption h6 {
   display: none
 }
