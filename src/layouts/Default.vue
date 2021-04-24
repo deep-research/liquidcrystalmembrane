@@ -94,14 +94,14 @@ p, ol, ul, li {
   padding-top: 32px;
 }
 
-#contents, #contents + ol {
-  border-left: 5px solid #224c98;
-}
-#contents {
-  margin-bottom: 0;
-  padding-bottom: 16px;
-  padding-left: 25px;
-}
+// #contents, #contents + ol {
+//   border-left: 5px solid #224c98;
+// }
+// #contents {
+//   margin-bottom: 0;
+//   padding-bottom: 16px;
+//   padding-left: 25px;
+// }
 
 @media (hover: hover) and (pointer: fine) {
   a {
