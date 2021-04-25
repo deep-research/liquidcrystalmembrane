@@ -18,4 +18,4 @@ Coffee plunger pot sugar lungo irish robusta black saucer cultivar. Mazagran, es
 
 ## Related Articles
 
-* [Liquid Crystal Membranes: Research and Automation](/articles/research-and-automation)
+1. [Liquid Crystal Membranes: Research and Automation](/articles/research-and-automation)
