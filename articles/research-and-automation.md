@@ -42,7 +42,7 @@ import ImageGallery from '~/components/ImageGallery.vue'
 
 Coffee plunger pot sugar lungo irish robusta black saucer cultivar. Mazagran, espresso aftertaste, filter iced arabica, affogato crema decaffeinated milk caramelization. So macchiato est, at organic, black sit dark cup café au lait crema.
 
-## Related Articles
+<h2><span v-b-tooltip.hover title="Sorted by Relevance">Related Articles</span></h2>
 
 1. [Liquid Crystal Membranes as a Biosensor](/articles/biosensor)
 2. [Liquid Crystal Membranes: New Discoveries and Technologies](/articles/new-discoveries/)
