@@ -11,6 +11,7 @@
       </b-input-group>
       <v-select :options="getCategoriesArray($page.categories.edges)" v-model="categoryFilter" :clearable="false" class="mt-2"></v-select>
       <v-select :options="getTagsArray($page.tags.edges)" v-model="tagFilter" :clearable="false" class="mt-2"></v-select>
+      <v-select :options="getMonthsArray($page.posts.edges)" v-model="dateFilter" :clearable="false" class="mt-2"></v-select>
     </div>
 
 
@@ -136,7 +137,8 @@ export default {
       currentPage: 1,
       perPage: 3,
       categoryFilter: "All Categories",
-      tagFilter: "All Tags"
+      tagFilter: "All Tags",
+      dateFilter: "All Dates"
     }
   },
   methods: {
@@ -163,6 +165,16 @@ export default {
       array.unshift("All Tags")
       return(array)
     },
+    getMonthsArray(data) {
+      let array = []
+      data.forEach(element => {
+        array.push(
+          this.$luxon(element.node.date, "MMMM yyyy")
+        )
+      })
+      array.unshift("All Dates")
+      return(array = [...new Set(array)])
+    },
     resetData () {
       Object.assign(this.$data, this.$options.data.apply(this))
       this.mounted = true
@@ -175,6 +187,7 @@ export default {
 
           let categoryMatch = false
           let tagMatch = false
+          let dateMatch = false
 
           if (
             // this.categoryFilter == "" ||
@@ -192,7 +205,15 @@ export default {
             tagMatch = true
           }
 
-          if (categoryMatch && tagMatch) {
+          if (
+            // this.categoryFilter == "" ||
+            this.dateFilter == "All Dates" ||
+            this.$luxon(post.node.date, "MMMM yyyy").includes(this.dateFilter)
+          ) {
+            dateMatch = true
+          }
+
+          if (categoryMatch && tagMatch && dateMatch) {
             if (post.node.title.toLowerCase().includes(search)) {
               return post.node.title.toLowerCase().includes(search)
             } else if (post.node.excerpt.toLowerCase().includes(search)) {
