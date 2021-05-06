@@ -206,7 +206,6 @@ export default {
           }
 
           if (
-            // this.categoryFilter == "" ||
             this.dateFilter == "All Dates" ||
             this.$luxon(post.node.date, "MMMM yyyy").includes(this.dateFilter)
           ) {

@@ -13,6 +13,7 @@
         <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
       </b-input-group>
       <v-select :options="tagsFound()" v-model="tagFilter" :clearable="false" class="mt-2"></v-select>
+      <v-select :options="getMonthsArray($page.category.belongsTo.edges)" v-model="dateFilter" :clearable="false" class="mt-2"></v-select>
     </div>
     <b-button @click="resetData" class="mt-2">Clear</b-button>
 
@@ -117,7 +118,8 @@ export default {
       search: '',
       currentPage: 1,
       perPage: 2,
-      tagFilter: "All Tags"
+      tagFilter: "All Tags",
+      dateFilter: "All Dates"
     }
   },
   methods: {
@@ -146,6 +148,16 @@ export default {
       array.unshift("All Tags")
       return array.sort()
     },
+    getMonthsArray(data) {
+      let array = []
+      data.forEach(element => {
+        array.push(
+          this.$luxon(element.node.date, "MMMM yyyy")
+        )
+      })
+      array.unshift("All Dates")
+      return(array = [...new Set(array)])
+    },
     breadcrumbs() {
       let array = [
         {
@@ -169,10 +181,25 @@ export default {
       return this.$page.category.belongsTo.edges.filter(article => {
           let search = this.search.toLowerCase().trim()
 
+          let tagMatch = false
+          let dateMatch = false
+
           if (
+            this.tagFilter == "" ||
             this.tagFilter == "All Tags" ||
             article.node.tags.find(element => element.title.toLowerCase().includes(this.tagFilter.toLowerCase()))
           ) {
+            tagMatch = true
+          }
+
+          if (
+            this.dateFilter == "All Dates" ||
+            this.$luxon(article.node.date, "MMMM yyyy").includes(this.dateFilter)
+          ) {
+            dateMatch = true
+          }
+
+          if (tagMatch && dateMatch) {
             if (article.node.title.toLowerCase().includes(search)) {
               return article.node.title.toLowerCase().includes(search)
             } else if (article.node.excerpt.toLowerCase().includes(search)) {

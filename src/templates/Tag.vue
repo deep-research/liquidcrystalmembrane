@@ -13,6 +13,7 @@
         <b-form-input type="search" name="search" id="search" placeholder="Search" v-model="search"></b-form-input>
       </b-input-group>
       <v-select :options="categoriesFound()" v-model="categoryFilter" :clearable="false" class="mt-2"></v-select>
+      <v-select :options="getMonthsArray($page.tag.belongsTo.edges)" v-model="dateFilter" :clearable="false" class="mt-2"></v-select>
     </div>
     <b-button @click="resetData" class="mt-2">Clear</b-button>
 
@@ -117,7 +118,8 @@ export default {
       search: '',
       currentPage: 1,
       perPage: 2,
-      categoryFilter: "All Categories"
+      categoryFilter: "All Categories",
+      dateFilter: "All Dates"
     }
   },
   methods: {
@@ -139,6 +141,16 @@ export default {
       }
       array.unshift("All Categories")
       return array.sort()
+    },
+    getMonthsArray(data) {
+      let array = []
+      data.forEach(element => {
+        array.push(
+          this.$luxon(element.node.date, "MMMM yyyy")
+        )
+      })
+      array.unshift("All Dates")
+      return(array = [...new Set(array)])
     },
     resetData () {
       Object.assign(this.$data, this.$options.data.apply(this))
@@ -167,10 +179,25 @@ export default {
       return this.$page.tag.belongsTo.edges.filter(article => {
           let search = this.search.toLowerCase().trim()
 
+          let categoryMatch = false
+          let dateMatch = false
+
           if (
+            this.categoryFilter == "" ||
             this.categoryFilter == "All Categories" ||
             article.node.category.title.toLowerCase().includes(this.categoryFilter.toLowerCase())
           ) {
+            categoryMatch = true
+          }
+
+          if (
+            this.dateFilter == "All Dates" ||
+            this.$luxon(article.node.date, "MMMM yyyy").includes(this.dateFilter)
+          ) {
+            dateMatch = true
+          }
+
+          if (categoryMatch && dateMatch) {
             if (article.node.title.toLowerCase().includes(search)) {
               return article.node.title.toLowerCase().includes(search)
             } else if (article.node.excerpt.toLowerCase().includes(search)) {
