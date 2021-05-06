@@ -225,8 +225,8 @@ export default {
               return post.node.category.title.toLowerCase().includes(search)
             } else if (this.getTagsLowercaseArray(post.node.tags).find(element => element.includes(search))) {
               return this.getTagsLowercaseArray(post.node.tags).find(element => element.includes(search))
-            } else if (this.$luxon(post.node.date).toLowerCase().includes(search)) {
-              return (this.$luxon(post.node.date)).toLowerCase().includes(search)
+            } else if (this.$luxon(post.node.date).includes(search)) {
+              return (this.$luxon(post.node.date)).includes(search)
             }
           }
       })
