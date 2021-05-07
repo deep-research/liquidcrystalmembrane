@@ -25,6 +25,16 @@
       </span> -->
     </div>
 
+    <b-form-radio-group
+      v-model="selected"
+      :options="options"
+      class="mt-4"
+      value-field="item"
+      text-field="name"
+      disabled-field="notEnabled"
+      stacked
+    ></b-form-radio-group>
+
     <div v-if="searchResults.length > 0">
       <div v-if="searchResults.length == 1">
         <p class="mt-4 mb-0">1 article found.</p>
@@ -138,7 +148,13 @@ export default {
       perPage: 3,
       categoryFilter: "All Categories",
       tagFilter: "All Tags",
-      dateFilter: "All Dates"
+      dateFilter: "All Dates",
+      selected: 'A',
+      options: [
+        { item: 'A', name: 'Sort By Newest' },
+        { item: 'B', name: 'Sort By Oldest' },
+        { item: 'C', name: 'Sort By Title' },
+      ],
     }
   },
   methods: {
@@ -233,6 +249,16 @@ export default {
     },
     lists() {
       const items = this.searchResults
+
+      console.log(items)
+
+      if (this.selected == "A") {
+        items.sort((a, b) => (a.node.date > b.node.date) ? -1 : 0)
+      } else if (this.selected == "B") {
+        items.sort((a, b) => (a.node.date > b.node.date) ? 1 : -1)
+      } else if (this.selected == "C") {
+        items.sort((a, b) => (a.node.title > b.node.title) ? 1 : -1)
+      }
 
       return items.slice(
         (this.currentPage - 1) * this.perPage,
