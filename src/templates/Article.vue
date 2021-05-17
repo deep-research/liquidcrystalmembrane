@@ -30,6 +30,18 @@
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
       <VueRemarkContent class="article-text mt-5" />
 
+      <div class="mt-5">
+        <span class="social-btn">
+          <facebook class="pr-3" :url="url()" scale="3"></facebook>
+        </span>
+        <span class="social-btn">
+          <twitter class="pr-3" :url="url()" :title="$page.post.title" scale="3"></twitter>
+        </span>
+        <span class="social-btn">
+          <email :url="url()" :subject="$page.post.title" scale="3"></email>
+        </span>
+      </div>
+
       <Disqus shortname="liquid-crystal-membrane" :identifier="$page.post.title" class="mt-5" />
     </article>
   </Layout>
@@ -62,10 +74,19 @@ query Article ($path: String!) {
 <script>
 // import BlogContent from '@/components/BlogContent'
 
+import { Facebook } from 'vue-socialmedia-share';
+import { Twitter } from 'vue-socialmedia-share';
+import { Email } from 'vue-socialmedia-share';
+
 export default {
   // components: {
   //   BlogContent,
   // },
+  components: {
+    Facebook,
+    Twitter,
+    Email
+  },
   metaInfo() {
     return {
       title: this.$page.post.title,
@@ -80,6 +101,9 @@ export default {
           txt.substr(1).toLowerCase()
         }).split(" ").join("-")
       return slug
+    },
+    url() {
+      return 'https://liquidcrystalmembrane.com' + this.$page.post.path
     },
     breadcrumbs() {
       let array = [
@@ -124,5 +148,9 @@ export default {
 .blogImage {
   max-height: 400px;
   width: 100%;
+}
+
+.social-btn:hover {
+  opacity: .6;
 }
 </style>
