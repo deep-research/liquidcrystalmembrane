@@ -160,4 +160,8 @@ export default {
 .social-btn:hover {
   opacity: .6;
 }
+
+.social-btn {
+  cursor: pointer;
+}
 </style>
