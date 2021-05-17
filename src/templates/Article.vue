@@ -30,23 +30,19 @@
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
       <VueRemarkContent class="article-text mt-5" />
 
-      <div class="mt-5">
-        <span class="social-btn">
-          <ClientOnly>
+      <ClientOnly>
+        <div class="mt-5">
+          <span class="social-btn">
             <facebook class="pr-3" :url="url()" scale="3"></facebook>
-          </ClientOnly>
-        </span>
-        <span class="social-btn">
-          <ClientOnly>
+          </span>
+          <span class="social-btn">
             <twitter class="pr-3" :url="url()" :title="$page.post.title" scale="3"></twitter>
-          </ClientOnly>
-        </span>
-        <span class="social-btn">
-          <ClientOnly>
+          </span>
+          <span class="social-btn">
             <email :url="url()" :subject="$page.post.title" scale="3"></email>
-          </ClientOnly>
-        </span>
-      </div>
+          </span>
+        </div>
+      </ClientOnly>
 
       <Disqus shortname="liquid-crystal-membrane" :identifier="$page.post.title" class="mt-5" />
     </article>
