@@ -152,10 +152,11 @@ export default {
 }
 
 .social-btn:hover {
-  opacity: .6;
+  opacity: .7;
 }
 
 .social-btn {
   cursor: pointer;
+  display:inline-block;
 }
 </style>
