@@ -93,7 +93,6 @@ export default {
       title: this.$page.post.title,
     }
   },
-
   methods: {
     slug() {
       let slug = this.$page.post.path.slice(10, -1).split("-").join(" ").replace(/\w\S*/g,
