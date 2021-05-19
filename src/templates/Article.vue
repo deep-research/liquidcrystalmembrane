@@ -157,6 +157,5 @@ export default {
 
 .social-btn {
   cursor: pointer;
-  display:inline-block;
 }
 </style>
