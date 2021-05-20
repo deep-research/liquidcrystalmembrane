@@ -33,29 +33,40 @@
       <div class="mt-5">
         <ClientOnly>
           <span v-b-tooltip.hover title="Share on Facebook" class="d-inline-block mr-3">
-            <facebook class="social-btn" :url="url()" scale="3"></facebook>
+            <facebook class="social-btn" :url="getUrl()" scale="3"></facebook>
           </span>
           <span v-b-tooltip.hover title="Share on Twitter" class="d-inline-block mr-3">
-            <twitter class="social-btn" :url="url()" :title="$page.post.title" scale="3"></twitter>
+            <twitter class="social-btn" :url="getUrl()" :title="$page.post.title" scale="3"></twitter>
           </span>
           <span v-b-tooltip.hover title="Share on WhatsApp" class="d-inline-block mr-3">
-            <whats-app  class="social-btn" :url="url()" :title="$page.post.title" scale="3"></whats-app>
+            <whats-app  class="social-btn" :url="getUrl()" :title="$page.post.title" scale="3"></whats-app>
           </span>
           <span v-b-tooltip.hover title="Share on Telegram" class="d-inline-block mr-3">
-            <telegram class="social-btn" :url="url()" scale="3"></telegram>
+            <telegram class="social-btn" :url="getUrl()" scale="3"></telegram>
           </span>
           <span v-b-tooltip.hover title="Share by Email" class="d-inline-block mr-3">
-            <email class="social-btn" :url="url()" :subject="$page.post.title" scale="3"></email>
+            <email class="social-btn" :url="getUrl()" :subject="$page.post.title" scale="3"></email>
           </span>
-          <span class="d-inline-block" v-b-tooltip.hover title="Copy Link"  v-clipboard="() => url()">
+          <span class="d-inline-block" v-b-tooltip.hover title="Copy Link" @click="showDismissibleAlert = true" v-clipboard="clipboard()">
             <div style="height: 3px; cursor: pointer;" @mouseover="urlHoverTrue()" @mouseleave="urlHoverFalse()"></div>
-            <b-button variant="secondary" style="height: 42px" class="url-btn"  v-bind:class="{ urlHoverCss: urlHover }">
-              <b-icon icon="link45deg"></b-icon>
+            <b-button variant="secondary" style="height: 42px; width: 42px; padding: 0" class="url-btn"  v-bind:class="{ urlHoverCss: urlHover }">
+              <b-icon icon="link45deg" style="font-size: 40px !important;"></b-icon>
             </b-button>
             <div style="height: 3px; cursor: pointer;" @mouseover="urlHoverTrue()" @mouseleave="urlHoverFalse()"></div>
           </span>
         </ClientOnly>
       </div>
+
+      <b-alert
+        variant="success"
+        dismissible
+        fade
+        :show="showDismissibleAlert"
+        @dismissed="showDismissibleAlert = false"
+        class="mt-3"
+      >
+        The link has been copied.
+      </b-alert>
 
       <Disqus shortname="liquid-crystal-membrane" :identifier="$page.post.title" class="mt-5" />
     </article>
@@ -96,6 +107,7 @@ export default {
   data() {
     return {
       urlHover: false,
+      showDismissibleAlert: false
     }
   },
   components: {
@@ -140,8 +152,11 @@ export default {
         }).split(" ").join("-")
       return slug
     },
-    url() {
+    getUrl() {
       return 'https://liquidcrystalmembrane.com' + this.$page.post.path
+    },
+    clipboard() {
+      return this.getUrl()
     },
     breadcrumbs() {
       let array = [
