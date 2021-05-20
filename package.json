@@ -21,6 +21,7 @@
     "node-sass": "^4.13.0",
     "remark-toc": "^7.2.0",
     "sass-loader": "^7.0.0",
+    "v-clipboard": "^2.2.3",
     "vue-disqus": "^4.0.1",
     "vue-luxon": "^0.10.0",
     "vue-paginate": "^3.6.0",

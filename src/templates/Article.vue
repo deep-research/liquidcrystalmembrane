@@ -32,9 +32,28 @@
 
       <div class="mt-5">
         <ClientOnly>
-          <facebook class="mr-3 social-btn" :url="url()" scale="3"></facebook>
-          <twitter class="mr-3 social-btn" :url="url()" :title="$page.post.title" scale="3"></twitter>
-          <email class="social-btn" :url="url()" :subject="$page.post.title" scale="3"></email>
+          <span v-b-tooltip.hover title="Share on Facebook" class="d-inline-block mr-3">
+            <facebook class="social-btn" :url="url()" scale="3"></facebook>
+          </span>
+          <span v-b-tooltip.hover title="Share on Twitter" class="d-inline-block mr-3">
+            <twitter class="social-btn" :url="url()" :title="$page.post.title" scale="3"></twitter>
+          </span>
+          <span v-b-tooltip.hover title="Share on WhatsApp" class="d-inline-block mr-3">
+            <whats-app  class="social-btn" :url="url()" :title="$page.post.title" scale="3"></whats-app>
+          </span>
+          <span v-b-tooltip.hover title="Share on Telegram" class="d-inline-block mr-3">
+            <telegram class="social-btn" :url="url()" scale="3"></telegram>
+          </span>
+          <span v-b-tooltip.hover title="Share by Email" class="d-inline-block mr-3">
+            <email class="social-btn" :url="url()" :subject="$page.post.title" scale="3"></email>
+          </span>
+          <span class="d-inline-block" v-b-tooltip.hover title="Copy Link"  v-clipboard="() => url()">
+            <div style="height: 3px; cursor: pointer;" @mouseover="urlHoverTrue()" @mouseleave="urlHoverFalse()"></div>
+            <b-button variant="secondary" style="height: 42px" class="url-btn"  v-bind:class="{ urlHoverCss: urlHover }">
+              <b-icon icon="link45deg"></b-icon>
+            </b-button>
+            <div style="height: 3px; cursor: pointer;" @mouseover="urlHoverTrue()" @mouseleave="urlHoverFalse()"></div>
+          </span>
         </ClientOnly>
       </div>
 
@@ -74,6 +93,11 @@ export default {
   // components: {
   //   BlogContent,
   // },
+  data() {
+    return {
+      urlHover: false,
+    }
+  },
   components: {
     Facebook: () =>
       import ('vue-socialmedia-share')
@@ -82,6 +106,14 @@ export default {
     Twitter: () =>
       import ('vue-socialmedia-share')
       .then(m => m.Twitter)
+      .catch(),
+    WhatsApp: () =>
+      import ('vue-socialmedia-share')
+      .then(m => m.WhatsApp)
+      .catch(),
+    Telegram: () =>
+      import ('vue-socialmedia-share')
+      .then(m => m.Telegram)
       .catch(),
     Email: () =>
       import ('vue-socialmedia-share')
@@ -94,6 +126,12 @@ export default {
     }
   },
   methods: {
+    urlHoverTrue() {
+      this.urlHover = true
+    },
+    urlHoverFalse() {
+      this.urlHover = false
+    },
     slug() {
       let slug = this.$page.post.path.slice(10, -1).split("-").join(" ").replace(/\w\S*/g,
         function (txt) {
@@ -150,11 +188,17 @@ export default {
   width: 100%;
 }
 
-.social-btn:hover {
+.social-btn:hover, .urlHoverCss {
   opacity: .7;
 }
 
 .social-btn {
   cursor: pointer;
+}
+
+.url-btn:hover {
+  opacity: .7;
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
 </style>

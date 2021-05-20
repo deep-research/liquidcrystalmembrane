@@ -1,6 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 
-import { BootstrapVue, BIconSearch } from 'bootstrap-vue'
+import { BootstrapVue, BIconSearch, BIconLink45deg} from 'bootstrap-vue'
 import './assets/styles/main.scss'
 
 import VueLuxon from "vue-luxon"
@@ -12,11 +12,14 @@ import vSelect from "vue-select"
 
 import VueDisqus from 'vue-disqus'
 
+import Clipboard from 'v-clipboard'
+
 import checkIfMobile from './mixins/checkIfMobile'
 
 export default function (Vue, { router, head, isClient }) {
   Vue.use(BootstrapVue)
   Vue.component('BIcon', BIconSearch)
+  Vue.component('BIcon', BIconLink45deg)
 
   Vue.use(VuePaginate)
 
@@ -30,6 +33,8 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component("v-select", vSelect)
 
   Vue.use(VueDisqus)
+
+  Vue.use(Clipboard)
 
   Vue.component('Layout', DefaultLayout)
   Vue.mixin(checkIfMobile)
