@@ -44,10 +44,10 @@
           <span v-b-tooltip.hover title="Share on Telegram" class="d-inline-block mr-3">
             <telegram class="social-btn" :url="getUrl()" scale="3"></telegram>
           </span>
-          <span v-b-tooltip.hover title="Share by Email" class="d-inline-block mr-3">
+          <span v-b-tooltip.hover  style="margin-top: 10px;" title="Share by Email" class="d-inline-block mr-3">
             <email class="social-btn" :url="getUrl()" :subject="$page.post.title" scale="3"></email>
           </span>
-          <span class="d-inline-block" v-b-tooltip.hover title="Copy Link" @click="showAlert" v-clipboard="clipboard()">
+          <span class="d-inline-block mr-3" style="margin-top: 10px;" v-b-tooltip.hover title="Copy Link" @click="showAlert" v-clipboard="clipboard()">
             <div style="height: 3px; cursor: pointer;" @mouseover="urlHoverTrue()" @mouseleave="urlHoverFalse()"></div>
             <b-button variant="secondary" style="height: 42px; width: 42px; padding: 0" class="url-btn"  v-bind:class="{ urlHoverCss: urlHover }">
               <b-icon icon="link45deg" style="width: 40px; height: 40px;"></b-icon>
