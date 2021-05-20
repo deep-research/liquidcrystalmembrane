@@ -1,6 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 
-import { BootstrapVue, BIconSearch, BIconLink45deg} from 'bootstrap-vue'
+import { BootstrapVue, BIcon, BIconSearch, BIconLink45deg} from 'bootstrap-vue'
 import './assets/styles/main.scss'
 
 import VueLuxon from "vue-luxon"
@@ -18,8 +18,9 @@ import checkIfMobile from './mixins/checkIfMobile'
 
 export default function (Vue, { router, head, isClient }) {
   Vue.use(BootstrapVue)
-  Vue.component('BIcon', BIconSearch)
-  Vue.component('BIcon', BIconLink45deg)
+  Vue.component('BIcon', BIcon)
+  Vue.component('BIconSearch', BIconSearch)
+  Vue.component('BIconLink45deg', BIconLink45deg)
 
   Vue.use(VuePaginate)
 
