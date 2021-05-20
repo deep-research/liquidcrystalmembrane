@@ -30,24 +30,24 @@
       <!-- <BlogContent class="mt-5" :content="$page.post.content"/> -->
       <VueRemarkContent class="article-text mt-5" />
 
-      <div class="mt-5">
+      <div style="margin-top: 38px;">
         <ClientOnly>
-          <span v-b-tooltip.hover title="Share on Facebook" class="d-inline-block mr-3">
+          <span v-b-tooltip.hover title="Share on Facebook" class="d-inline-block mr-3 social-span">
             <facebook class="social-btn" :url="getUrl()" scale="3"></facebook>
           </span>
-          <span v-b-tooltip.hover title="Share on Twitter" class="d-inline-block mr-3">
+          <span v-b-tooltip.hover title="Share on Twitter" class="d-inline-block mr-3 social-span">
             <twitter class="social-btn" :url="getUrl()" :title="$page.post.title" scale="3"></twitter>
           </span>
-          <span v-b-tooltip.hover title="Share on WhatsApp" class="d-inline-block mr-3">
+          <span v-b-tooltip.hover title="Share on WhatsApp" class="d-inline-block mr-3 social-span">
             <whats-app  class="social-btn" :url="getUrl()" :title="$page.post.title" scale="3"></whats-app>
           </span>
-          <span v-b-tooltip.hover title="Share on Telegram" class="d-inline-block mr-3">
+          <span v-b-tooltip.hover title="Share on Telegram" class="d-inline-block mr-3 social-span">
             <telegram class="social-btn" :url="getUrl()" scale="3"></telegram>
           </span>
-          <span v-b-tooltip.hover  style="margin-top: 10px;" title="Share by Email" class="d-inline-block mr-3">
+          <span v-b-tooltip.hover title="Share by Email" class="d-inline-block mr-3 social-span">
             <email class="social-btn" :url="getUrl()" :subject="$page.post.title" scale="3"></email>
           </span>
-          <span class="d-inline-block mr-3" style="margin-top: 10px;" v-b-tooltip.hover title="Copy Link" @click="showAlert" v-clipboard="clipboard()">
+          <span class="d-inline-block mr-3 social-span" v-b-tooltip.hover title="Copy Link" @click="showAlert" v-clipboard="clipboard()">
             <div style="height: 3px; cursor: pointer;" @mouseover="urlHoverTrue()" @mouseleave="urlHoverFalse()"></div>
             <b-button variant="secondary" style="height: 42px; width: 42px; padding: 0" class="url-btn"  v-bind:class="{ urlHoverCss: urlHover }">
               <b-icon icon="link45deg" style="width: 40px; height: 40px;"></b-icon>
@@ -216,6 +216,10 @@ export default {
 
 .social-btn {
   cursor: pointer;
+}
+
+.social-span {
+  margin-top: 10px;
 }
 
 .url-btn:hover {
