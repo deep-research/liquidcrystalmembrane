@@ -47,10 +47,10 @@
           <span v-b-tooltip.hover title="Share by Email" class="d-inline-block mr-3">
             <email class="social-btn" :url="getUrl()" :subject="$page.post.title" scale="3"></email>
           </span>
-          <span class="d-inline-block" v-b-tooltip.hover title="Copy Link" @click="showDismissibleAlert = true" v-clipboard="clipboard()">
+          <span class="d-inline-block" v-b-tooltip.hover title="Copy Link" @click="showAlert" v-clipboard="clipboard()">
             <div style="height: 3px; cursor: pointer;" @mouseover="urlHoverTrue()" @mouseleave="urlHoverFalse()"></div>
             <b-button variant="secondary" style="height: 42px; width: 42px; padding: 0" class="url-btn"  v-bind:class="{ urlHoverCss: urlHover }">
-              <b-icon icon="link45deg" style="font-size: 40px !important;"></b-icon>
+              <b-icon icon="link45deg" style="width: 40px; height: 40px;"></b-icon>
             </b-button>
             <div style="height: 3px; cursor: pointer;" @mouseover="urlHoverTrue()" @mouseleave="urlHoverFalse()"></div>
           </span>
@@ -61,8 +61,8 @@
         variant="success"
         dismissible
         fade
-        :show="showDismissibleAlert"
-        @dismissed="showDismissibleAlert = false"
+        :show="dismissCountDown"
+        @dismiss-count-down="countDownChanged"
         class="mt-3"
       >
         The link has been copied.
@@ -107,7 +107,8 @@ export default {
   data() {
     return {
       urlHover: false,
-      showDismissibleAlert: false
+      dismissSecs: 5,
+      dismissCountDown: 0
     }
   },
   components: {
@@ -157,6 +158,12 @@ export default {
     },
     clipboard() {
       return this.getUrl()
+    },
+    countDownChanged(dismissCountDown) {
+      this.dismissCountDown = dismissCountDown
+    },
+    showAlert() {
+      this.dismissCountDown = this.dismissSecs
     },
     breadcrumbs() {
       let array = [
