@@ -5,7 +5,7 @@ date: 2021-03-21 17:00
 author: Arkady Fisher
 image: "/uploads/coffee.svg"
 category: Art
-tags: ["Business", "Journal", "Other"]
+tags: ["Business", "Journal"]
 ---
 
 Foam, cultivar chicory grounds crema java wings. Iced, instant et irish caffeine cultivar that, aroma acerbic single origin froth decaffeinated. Blue mountain foam white qui to go filter saucer con panna foam black.
