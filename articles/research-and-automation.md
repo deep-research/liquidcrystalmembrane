@@ -5,7 +5,7 @@ date: 2021-03-24 20:00
 author: Arkady Fisher
 image: "/uploads/coffee.svg"
 category: Chemistry
-tags: ["Business", "News", "Study", "Info]
+tags: ["Business", "News", "Study", "Info"]
 ---
 
 ## Contents
