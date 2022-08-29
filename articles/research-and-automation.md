@@ -47,7 +47,7 @@ Coffee plunger pot sugar lungo irish robusta black saucer cultivar. Mazagran, es
 1. [Liquid Crystal Membranes as a Biosensor](/articles/biosensor)
 2. [Liquid Crystal Membranes: New Discoveries and Technologies](/articles/new-discoveries/)
 
-[^1]: Here is the footnote.
+[^1]: Here is the 1st footnote.
 
     Subsequent paragraphs are indented to show that they
     belong to the previous footnote.
