@@ -5,9 +5,7 @@ date: 2024-06-17 20:30
 author: Arkady Fisher
 image: "/uploads/coffee.svg"
 category: News
-# tags: ["Journal", "News", "Opinion"]
----
-
+tags: ["USA"]
 The bill has been proposed in the US Senate.
 
 Click to read: [Must Read Alaska](https://mustreadalaska.com/senators-push-selective-registration-for-women-in-national-defense-authorization-act/)
