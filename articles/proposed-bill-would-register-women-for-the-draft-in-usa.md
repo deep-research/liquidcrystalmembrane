@@ -10,4 +10,4 @@ tags: ["USA"]
 
 The bill has been proposed in the US Senate.
 
-Click to read: [Must Read Alaska](https://mustreadalaska.com/senators-push-selective-registration-for-women-in-national-defense-authorization-act/)
+**Click to Read**: [Must Read Alaska](https://mustreadalaska.com/senators-push-selective-registration-for-women-in-national-defense-authorization-act/)
