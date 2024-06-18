@@ -58,13 +58,13 @@ module.exports = {
       }
     },
     {
-        use: 'gridsome-plugin-gtag',
-        options: {
-          config: {
-            id: 'G-CVR1WQS4CZ'
-          },
+      use: 'gridsome-plugin-gtag',
+      options: {
+        config: {
+          id: 'G-CVR1WQS4CZ'
         },
       },
+    },
     {
       use: '@gridsome/plugin-sitemap',
       options: {
