@@ -2,7 +2,7 @@ require('dotenv').config()
 
 module.exports = {
   siteName: 'Liquid Crystal Membrane',
-  siteDescription: 'Scientific research on liquid crystal membranes and other related topics.',
+  siteDescription: 'Scientific research on liquid crystal membranes and other topics.',
   siteUrl: 'https://liquidcrystalmembrane.com',
   chainWebpack: config => {
     config
