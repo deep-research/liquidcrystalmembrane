@@ -1,5 +1,4 @@
 require('dotenv').config()
-const { GtagPlugin } = require('vue-gtag');
 
 module.exports = {
   siteName: 'Liquid Crystal Membrane',
@@ -59,7 +58,7 @@ module.exports = {
       }
     },
     {
-        use: GtagPlugin,
+        use: 'gridsome-plugin-gtag',
         options: {
           config: {
             id: 'G-CVR1WQS4CZ'

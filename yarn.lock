@@ -4626,12 +4626,12 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-gridsome-plugin-gtm@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/gridsome-plugin-gtm/-/gridsome-plugin-gtm-0.1.1.tgz#9359b961a806c861d91ba056e5e117fe240219eb"
-  integrity sha512-74lUgH6QHUNPS3Ahz1CAx9RbKidMebaU6S7XCXtpVJn6lAc8Azep1Dkjf/oGdP7x5Ll7vPmZmVTbNlXlPKETjQ==
+gridsome-plugin-gtag@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-gtag/-/gridsome-plugin-gtag-0.1.10.tgz#99ab1b494a874a996b08ee7073766c8132614d59"
+  integrity sha512-/T1snhRRO4akDx6Hi4rYpMtXo8jo8uEf0brHbOI6bbb+vg7XTFucEAOKklUdKFTLKFAwH1VIQ+AZajU88U6iHg==
   dependencies:
-    vue-gtm "^2.0.0"
+    vue-gtag "^1.10.0"
 
 gridsome@^0.7.20:
   version "0.7.23"
@@ -9765,11 +9765,6 @@ url-parse@^1.4.3, url-parse@^1.5.3:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
-url-search-params-polyfill@^8.1.0:
-  version "8.2.5"
-  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-8.2.5.tgz#2d31de6a2140c9b9cf6ee036fe0be07dd2644674"
-  integrity sha512-FOEojW4XReTmtZOB7xqSHmJZhrNTmClhBriwLTmle4iA7bwuCo6ldSfbtsFSb8bTf3E0a3XpfonAdaur9vqq8A==
-
 url-to-options@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
@@ -9951,17 +9946,10 @@ vue-functional-data-merge@^3.1.0:
   resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-3.1.0.tgz#08a7797583b7f35680587f8a1d51d729aa1dc657"
   integrity sha512-leT4kdJVQyeZNY1kmnS1xiUlQ9z1B/kdBFCILIjYYQDqZgLqCLa0UhjSSeRX6c3mUe6U5qYeM8LrEqkHJ1B4LA==
 
-vue-gtag@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/vue-gtag/-/vue-gtag-2.0.1.tgz#d4dc1b9cf79809c37ce844824c0f7fa97af520dd"
-  integrity sha512-aM4A58FVL0wV2ptYi+xzAjeg+pQVRyUcfBc5UkXAwQrR4t3WBhor50Izp2I+3Oo7+l+vWJ7u78DGcNzReb8S/A==
-
-vue-gtm@^2.0.0:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/vue-gtm/-/vue-gtm-2.3.4.tgz#19d5402853f90d4850a9d0042c184e5c6b91b1cf"
-  integrity sha512-09e5XMxnkqDt33lonKW0q2KCageK3d0vN5aA+IAMi4c3TKtpat86Y/DllhIeKWeLBoUT4elz+S+bVDHUGzUA2A==
-  dependencies:
-    url-search-params-polyfill "^8.1.0"
+vue-gtag@^1.10.0:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/vue-gtag/-/vue-gtag-1.16.1.tgz#edb2f20ab4f6c4d4d372dfecf8c1fcc8ab890181"
+  integrity sha512-5vs0pSGxdqrfXqN1Qwt0ZFXG0iTYjRMu/saddc7QIC5yp+DKgjWQRpGYVa7Pq+KbThxwzzMfo0sGi7ISa6NowA==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
