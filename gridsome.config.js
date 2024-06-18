@@ -2,7 +2,7 @@ require('dotenv').config()
 
 module.exports = {
   siteName: 'Liquid Crystal Membrane',
-  siteDescription: 'Scientific research on liquid crystal membranes and other topics.',
+  siteDescription: 'Scientific Research on Liquid Crystal Membranes and World News Reporting',
   siteUrl: 'https://liquidcrystalmembrane.com',
   chainWebpack: config => {
     config
@@ -58,9 +58,11 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: 'gridsome-plugin-gtm',
       options: {
-        id: 'UA-193697648-2'
+        id: 'G-CVR1WQS4CZ',
+        enabled: true,
+        debug: true
       }
     },
     {

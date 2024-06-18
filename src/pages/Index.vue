@@ -12,7 +12,7 @@
         class="mx-auto"
         id="title-card" >
         <b-card-text>
-          <span class="text-center" id="subtitle">Scientific research on liquid crystal membranes and other related topics.</span>
+          <span class="text-center" id="subtitle">Scientific Research on Liquid Crystal Membranes and World News Reporting</span>
         </b-card-text>
       </b-card>
     </div>

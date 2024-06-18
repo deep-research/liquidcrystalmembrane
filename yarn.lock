@@ -921,13 +921,6 @@
     sort-package-json "^1.15.0"
     update-notifier "^4.1.0"
 
-"@gridsome/plugin-google-analytics@^0.1.0":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@gridsome/plugin-google-analytics/-/plugin-google-analytics-0.1.2.tgz#5ffe9c80a0c9c3418a51c21fcbdc5fae7dd4ff1f"
-  integrity sha512-41rWKTXQLnZphP8Fozzjh240lg/v5/JEDacB6ZJEr3RzXz3oYvoEQMOxQaUEgZkS8oOSG9TYDoBWVegzwMOuaw==
-  dependencies:
-    vue-analytics "^5.16.1"
-
 "@gridsome/plugin-sitemap@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@gridsome/plugin-sitemap/-/plugin-sitemap-0.4.0.tgz#dbd51c747cb8d6d9c827104c832e35a5aa4807af"
@@ -4632,6 +4625,13 @@ gray-matter@^4.0.2:
     kind-of "^6.0.2"
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
+
+gridsome-plugin-gtm@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-gtm/-/gridsome-plugin-gtm-0.1.1.tgz#9359b961a806c861d91ba056e5e117fe240219eb"
+  integrity sha512-74lUgH6QHUNPS3Ahz1CAx9RbKidMebaU6S7XCXtpVJn6lAc8Azep1Dkjf/oGdP7x5Ll7vPmZmVTbNlXlPKETjQ==
+  dependencies:
+    vue-gtm "^2.0.0"
 
 gridsome@^0.7.20:
   version "0.7.23"
@@ -9765,6 +9765,11 @@ url-parse@^1.4.3, url-parse@^1.5.3:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
+url-search-params-polyfill@^8.1.0:
+  version "8.2.5"
+  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-8.2.5.tgz#2d31de6a2140c9b9cf6ee036fe0be07dd2644674"
+  integrity sha512-FOEojW4XReTmtZOB7xqSHmJZhrNTmClhBriwLTmle4iA7bwuCo6ldSfbtsFSb8bTf3E0a3XpfonAdaur9vqq8A==
+
 url-to-options@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
@@ -9931,11 +9936,6 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-analytics@^5.16.1:
-  version "5.22.1"
-  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.22.1.tgz#9d6b32da56daee1b9dfb23a267b50349a03f710f"
-  integrity sha512-HPKQMN7gfcUqS5SxoO0VxqLRRSPkG1H1FqglsHccz6BatBatNtm/Vyy8brApktZxNCfnAkrSVDpxg3/FNDeOgQ==
-
 vue-awesome@^3.0.0:
   version "3.5.4"
   resolved "https://registry.yarnpkg.com/vue-awesome/-/vue-awesome-3.5.4.tgz#da14ca20a3c6415c72823a7f743022f2dbd0183f"
@@ -9950,6 +9950,13 @@ vue-functional-data-merge@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-3.1.0.tgz#08a7797583b7f35680587f8a1d51d729aa1dc657"
   integrity sha512-leT4kdJVQyeZNY1kmnS1xiUlQ9z1B/kdBFCILIjYYQDqZgLqCLa0UhjSSeRX6c3mUe6U5qYeM8LrEqkHJ1B4LA==
+
+vue-gtm@^2.0.0:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/vue-gtm/-/vue-gtm-2.3.4.tgz#19d5402853f90d4850a9d0042c184e5c6b91b1cf"
+  integrity sha512-09e5XMxnkqDt33lonKW0q2KCageK3d0vN5aA+IAMi4c3TKtpat86Y/DllhIeKWeLBoUT4elz+S+bVDHUGzUA2A==
+  dependencies:
+    url-search-params-polyfill "^8.1.0"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
