@@ -58,9 +58,12 @@ module.exports = {
         }
       }
     },
-    new GtagPlugin({
-      config: { id: 'G-CVR1WQS4CZ' },
-    }),
+    {
+      use: GtagPlugin,
+      options: {
+        config: { id: 'G-CVR1WQS4CZ' }, // Replace with your GA4 Measurement ID
+      },
+    },
     {
       use: '@gridsome/plugin-sitemap',
       options: {
