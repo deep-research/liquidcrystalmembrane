@@ -62,7 +62,7 @@ module.exports = {
         use: GtagPlugin,
         options: {
           config: {
-            id: 'G-CVR1WQS4CZ' // Replace with your GA4 Measurement ID
+            id: 'G-CVR1WQS4CZ'
           },
         },
       },
