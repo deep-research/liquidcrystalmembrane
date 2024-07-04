@@ -5,7 +5,7 @@ date: 2024-06-17 20:30
 author: Arkady Fisher
 image: "/uploads/coffee.svg"
 category: News
-tags: ["USA"]
+tags: ["US Draft"]
 ---
 
 The bill has been proposed in the US Senate.
