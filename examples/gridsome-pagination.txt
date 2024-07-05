@@ -22,4 +22,4 @@
 
 # Page Query
 # query ($page: Int) {
-	# posts: allArticle(sortBy: "date", perPage: 3, page: $page) @paginate {
+	# posts: allArticle(sortBy: "date", perPage: 10, page: $page) @paginate {

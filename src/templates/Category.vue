@@ -117,7 +117,7 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 2,
+      perPage: 10,
       tagFilter: "All Tags",
       dateFilter: "All Dates"
     }

@@ -107,7 +107,7 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 4,
+      perPage: 10,
       selected: 'A',
       options: [
         { item: 'A', name: 'Sort By Count' },

@@ -145,7 +145,7 @@ export default {
     return {
       search: '',
       currentPage: 1,
-      perPage: 3,
+      perPage: 10,
       categoryFilter: "All Categories",
       tagFilter: "All Tags",
       dateFilter: "All Dates",
