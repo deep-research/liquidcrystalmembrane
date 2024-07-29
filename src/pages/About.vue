@@ -4,6 +4,7 @@
     
     <h3>Related Sites</h3>
     <ul>
+      <li><a target="_blank" href="https://newspsychic.com">News Psychic Website</a></li>
       <li><a target="_blank" href="https://t.me/newspsychic">News Psychic Telegram Channel</a></li>
       <li><a target="_blank" href="https://t.me/newspsychicforum">News Psychic Telegram Forum</a></li>
     </ul>
