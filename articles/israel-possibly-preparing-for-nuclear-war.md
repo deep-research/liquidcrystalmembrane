@@ -2,7 +2,7 @@
 title: Israel Possibly Preparing For Nuclear War
 excerpt: The Dimona reactor is being modernized to produce a higher volume of nuclear weapons.
 date: 2024-06-18 20:30
-author: Arkady Fisher
+author: News Psychic
 # image: "/uploads/coffee.svg"
 category: News
 tags: ["Israel Nuclear"]

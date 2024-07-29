@@ -2,7 +2,7 @@
 title: "Liquid Crystal Membranes: Research and Automation"
 excerpt: Id roast latte, grounds turkish sweet skinny strong medium. Bar, sit, grinder cinnamon viennese redeye aroma blue mountain.
 date: 2021-03-24 20:00
-author: Arkady Fisher
+author: News Psychic
 image: "/uploads/coffee.svg"
 category: Chemistry
 tags: ["Business", "News", "Study"]

@@ -2,7 +2,7 @@
 title: Record Temperature in the Middle East a Sign of Biblical Prophecy Being Fulfilled 
 excerpt: Isaiah 11:15 says that when the Euphrates river drys up, the Iranian military will be able to cross west past the Euphrates and have a military advantage. The last time this happened was during the Battle of Opis in 539 BC when Persian won a war against Babylon.
 date: 2024-07-21 20:37
-author: Arkady Fisher
+author: News Psychic
 image: "/uploads/coffee.svg"
 category: News
 tags: ["Prophecy", "Israel Iran War"]
