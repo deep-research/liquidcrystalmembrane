@@ -19,9 +19,9 @@ Here is a list of Iranian nuclear facilities and their distances in kilometers f
 - **Fordo**: 1600 km
 - **Tehran**: 1530 km
 - **Arak Heavy Water Plant**: 1550 km
-- **Khark Island**: 1410 km
+- **Khark Island (Oil Production Facility)**: 1410 km
 
-The distances are shorter than the distance from Israel to Yemen, which is 200 km, where Israel recently conducted an attack. It is very difficult to understand why Iranian rulers are initiating all these conflicts by supporting Hamas, Hezbollah, and the Houthis, as this could lead to so many problems for them and their people.
+The distances are shorter than the distance from Israel to Yemen, which is 2000 km, where Israel recently conducted an attack. It is very difficult to understand why Iranian rulers are initiating all these conflicts by supporting Hamas, Hezbollah, and the Houthis, as this could lead to so many problems for them and their people.
 
 # Related Article (Russian Language)
 
