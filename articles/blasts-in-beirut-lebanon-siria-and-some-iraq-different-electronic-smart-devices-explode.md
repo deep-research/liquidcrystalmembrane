@@ -1,6 +1,6 @@
 ---
 title: "BLASTS IN BEIRUT: LEBANON, SIRIA AND SOME IRAQ DIFFERENT ELECTRONIC SMART DEVICES EXPLODE, 5000 INJURED, MORE THAN 50 DEAD"
-excerpt: "This New Kind of Attach Which Was Happened Between Countries at War. But the Same Kind of Attack Could Be Used by Terrorist or Anybody to Reach Various People in Different Countries" 
+excerpt: "This New Kind of Attach Which Was Happened Between Countries at War. But the Same Kind of Attack Could Be Used by Terrorist or Anybody to Reach Various People in Different Countries"  
 date: 2024-09-20 14:00
 author: News Psychic
 # image: "/uploads/coffee.svg"
