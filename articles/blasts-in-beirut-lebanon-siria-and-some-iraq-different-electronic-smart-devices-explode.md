@@ -1,6 +1,6 @@
 ---
 title: "BLASTS IN BEIRUT: LEBANON, SIRIA AND SOME IRAQ DIFFERENT ELECTRONIC SMART DEVICES EXPLODE, 5000 INJURED, MORE THAN 50 DEAD"
-excerpt: "This New Kind of Attach Which Was Happened Between Countries at War. But the Same Kind of Attack Could Be Used by Terrorist or Anybody to Reach Various People in Different Countries"  
+excerpt: "This New Kind of Attack Which Was Happened Between Countries at War. But the Same Kind of Attack Could Be Used by Terrorist or Anybody to Reach Various People in Different Countries"  
 date: 2024-09-20 14:00
 author: News Psychic
 # image: "/uploads/coffee.svg"
@@ -23,12 +23,12 @@ Another dangers are the smart devices who permanently attached to the human body
 If don’t want your device be visible on Internet use Faraday bag:
 https://www.amazon.com/dp/B07RSHRCSS/ref=sspa_dk_detail_5?pd_rd_i=B07RSHRCSS&pd_rd_w=tw1qn&content-id=amzn1.sym.386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_p=386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_r=BJNGCEJ75A381P364XFZ&pd_rd_wg=iPDiY&pd_rd_r=4d63e763-3167-447d-8c75-2c9f54e0469d&s=generic&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1ating-labels/RLC-80.pdf?_gl=1*1t56we8*_up*MQ..&gclid=CjwKCAjw0aS3BhA3EiwAKaD2Za6GLTagQxzfq9GaT2XmkEAlE7qBttJtTOdxjBZcDM-PMmdOpEZAVRoCPwMQAvD_BwE
 
-Thousands of handheld radios  and other smart devices EXPLODE in second wave of Israeli attacks on Lebanon
+Thousands of handheld radios and other smart devices EXPLODE in second wave of Israeli attacks on Lebanon
 https://www.naturalnews.com/2024-09-19-thousands-radios-explode-israeli-attacks-lebanon.html
 Now life is getting very dangerous: your iPhone can make you blind, it risky to fly on air plain, consumer battery can burn down your house, etc.  No one is safe: The global threat of Israel’s weaponized pagers
 https://www.naturalnews.com/2024-09-20-the-global-threat-of-israels-weaponized-pagers.html
 
-Personnel Safety Осторожно, опасные батарейки: фирма Anker опубликовала строгое предупреждение. Consumer batteries in Israel are blowing up. 
+Personnel Safety Осторожно, опасные батарейки: фирма Anker опубликовала строгое предупреждение. Consumer batteries in Israel are blowing up or creating fires. 
 https://www.vesty.co.il/main/article/b1ok5b3aa
 
 Electric cars batteries can explode. Try to avoid external heat, but it is difficult to do in hot weather.
