@@ -26,6 +26,6 @@ tags: ["Rock Music"]
 1. [Apathy = Freedom](https://victorsarchive.com/posts/apathy-equals-freedom-song-by-reenchantment/)
 1. [By the Light of the Moon](https://victorsarchive.com/posts/by-the-light-of-the-moon-song-by-reenchantment/)
 1. [Disoriented By the Forest Dark (Far From Help)](https://victorsarchive.com/posts/disoriented-by-the-forest-dark-far-from-help-song-by-reenchantment/)
-1. [From Path to Portal](https://victorsarchive.com/posts/from-path-to-portal/)
+1. [From Path to Portal](https://victorsarchive.com/posts/from-path-to-portal-song-by-reenchantment/)
 1. [High Fructose Corn Syrup](https://victorsarchive.com/posts/high-fructose-corn-syrup-song-by-lamp/)
 1. [Illusion of Control](https://victorsarchive.com/posts/illusion-of-control-song-by-reenchantment/)
