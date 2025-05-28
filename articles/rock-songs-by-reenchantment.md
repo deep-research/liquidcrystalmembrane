@@ -1,12 +1,14 @@
 ---
 title: Rock Songs By Reenchantment
-excerpt: Listen at https://victorsarchive.com/tags/music-genre-rock/.
+# excerpt: Listen at https://victorsarchive.com/tags/music-genre-rock/.
 date: 2024-08-19 13:40
 author: Reenchantment
 # image: "/uploads/coffee.svg"
 category: Music
 tags: ["Rock Music"]
 ---
+
+[All Songs](https://victorsarchive.com/tags/music-genre-rock/)
 
 1. [Song for a Friend](https://victorsarchive.com/posts/song-for-a-friend-song-by-reenchantment/)
 1. [Under the Spell of the Mystical Mist](https://victorsarchive.com/posts/under-the-spell-of-the-mystical-mist-song-by-strange-people-in-pain/)

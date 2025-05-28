@@ -1,12 +1,14 @@
 ---
 title: Doom Metal Songs By Reenchantment
-excerpt: Listen at https://victorsarchive.com/tags/music-genre-doom-metal/.
+# excerpt: Listen at https://victorsarchive.com/tags/music-genre-doom-metal/.
 date: 2024-08-19 13:40
 author: Reenchantment
 # image: "/uploads/coffee.svg"
 category: Music
 tags: ["Doom Metal Music"]
 ---
+
+[All Songs](https://victorsarchive.com/tags/music-genre-doom-metal/)
 
 1. [The Curse of the Gothic Rainberries at Death’s Door](https://victorsarchive.com/posts/the-curse-of-the-gothic-rainberries-at-deaths-door-song-by-reenchantment/)
 1. [Gaze into the Vast Ethers of Perception](https://victorsarchive.com/posts/gaze-into-the-vast-ethers-of-perception-song-by-reenchantment/)

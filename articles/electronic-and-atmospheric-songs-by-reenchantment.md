@@ -1,12 +1,13 @@
 ---
 title: Electronic and Atmospheric Songs By Reenchantment
-excerpt: Listen at https://victorsarchive.com/tags/music-genre-electronic/.
+# excerpt: Listen at https://victorsarchive.com/tags/music-genre-electronic/.
 date: 2024-08-19 13:40
 author: Reenchantment
 # image: "/uploads/coffee.svg"
 category: Music
 tags: ["Electronic and Atmospheric Music"]
 ---
+[All Songs](https://victorsarchive.com/tags/music-genre-electronic/)
 
 1. [The Legend of Easter Island](https://victorsarchive.com/posts/the-legend-of-easter-island-song-by-reenchantment/)
 1. [The Life of a Pilgrim](https://victorsarchive.com/posts/the-life-of-a-pilgrim-song-by-reenchantment/)
