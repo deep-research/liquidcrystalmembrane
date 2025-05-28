@@ -1,6 +1,6 @@
 ---
 title: Doom Metal Songs By Reenchantment
-excerpt: Listen at https://victorsarchive.com/blog/category/doom-metal.
+excerpt: Listen at https://victorsarchive.com/tags/music-genre-doom-metal/.
 date: 2024-08-19 13:40
 author: Reenchantment
 # image: "/uploads/coffee.svg"

@@ -235,6 +235,9 @@ export default {
 
 <style lang="scss" scoped>
 .media {
+  // Prevent long URLs from overflowing parent div
+  overflow-wrap: anywhere;
+
   img {
     width: 120px;
     height: 120px;
