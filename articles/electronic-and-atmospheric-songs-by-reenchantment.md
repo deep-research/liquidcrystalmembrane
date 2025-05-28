@@ -1,6 +1,6 @@
 ---
 title: Electronic and Atmospheric Songs By Reenchantment
-# excerpt: Listen at https://victorsarchive.com/tags/music-genre-electronic/.
+excerpt: Song links from victorsarchive.com.
 date: 2024-08-19 13:40
 author: Reenchantment
 # image: "/uploads/coffee.svg"
