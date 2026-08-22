@@ -5,5 +5,7 @@ services:
       - "8080:8080"
     volumes:
       - .:/app
+      - ./.git:/app/.git                  # Maps the root git folder
+      - C:\Users\Victor\.ssh:/root/.ssh   # Maps your Windows SSH keys
       - /app/node_modules
     command: yarn develop --host 0.0.0.0
