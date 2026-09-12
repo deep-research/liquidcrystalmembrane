@@ -31,11 +31,11 @@ jobs:
           target: "/var/www/prototype-liquidcrystalmembrane/"
 
       - name: Flatten directory structure on VPS
-              uses: appleboy/ssh-action@v1.0.3
-              with:
-                host: ${{ secrets.VPS_HOST }}
-                username: ${{ secrets.VPS_USER }}
-                key: ${{ secrets.VPS_SSH_KEY }}
-              script: |
-                cp -a /var/www/prototype-liquidcrystalmembrane/dist/. /var/www/prototype-liquidcrystalmembrane/
-                rm -rf /var/www/prototype-liquidcrystalmembrane/dist
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+        script: |
+          cp -a /var/www/prototype-liquidcrystalmembrane/dist/. /var/www/prototype-liquidcrystalmembrane/
+          rm -rf /var/www/prototype-liquidcrystalmembrane/dist
