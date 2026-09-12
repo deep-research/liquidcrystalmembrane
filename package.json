@@ -5,7 +5,8 @@
     "develop": "gridsome develop",
     "explore": "gridsome explore",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -f"
+    "deploy": "gh-pages -d dist -f",
+    "deploy-vps": "docker compose run --rm app sh -c \"yarn build\" && git subtree push --prefix dist vps main"
   },
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.4.0",
