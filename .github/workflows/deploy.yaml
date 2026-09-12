@@ -15,8 +15,8 @@ jobs:
 
       - name: Build via Docker Compose
         run: |
-          docker compose run --rm frontend yarn install
-          docker compose run --rm frontend yarn build
+          docker compose run --rm app yarn install
+          docker compose run --rm app yarn build
 
       - name: Copy build files to VPS via SCP
         uses: appleboy/scp-action@v0.1.7
