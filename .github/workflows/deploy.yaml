@@ -36,7 +36,6 @@ jobs:
                 host: ${{ secrets.VPS_HOST }}
                 username: ${{ secrets.VPS_USER }}
                 key: ${{ secrets.VPS_SSH_KEY }}
-      - script: |
-              # Copy all contents (including hidden files) to the web root, then delete the dist folder
-              cp -a /var/www/prototype-liquidcrystalmembrane/dist/. /var/www/prototype-liquidcrystalmembrane/
-              rm -rf /var/www/prototype-liquidcrystalmembrane/dist
+              script: |
+                cp -a /var/www/prototype-liquidcrystalmembrane/dist/. /var/www/prototype-liquidcrystalmembrane/
+                rm -rf /var/www/prototype-liquidcrystalmembrane/dist
